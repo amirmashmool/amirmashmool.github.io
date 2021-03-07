@@ -35,6 +35,23 @@ $(document).ready(function() {
             });
         });
     });
+ 
+ 
+  $('#publication-link').on('click', function(e) {
+        e.preventDefault();
+        // if publication component is already loaded:
+        if ($('#_2_').length)
+            return;
+        $component.fadeOut(400, function() {
+            $component.load('publication', function() {
+                resume();
+                $(this).fadeIn(400);
+            });
+        });
+    });
+ 
+ 
+ 
 
     $('#gallery-link').on('click', function(e) {
         e.preventDefault();
@@ -51,6 +68,11 @@ $(document).ready(function() {
 
     $component.load('resume', resume);
 });
+
+
+
+
+
 
 var minimal = false;
 
