@@ -211,7 +211,7 @@ function resume() {
         };
         $.ajax({
             type: 'POST',
-            url: 'http://website-email-server.appspot.com/email',
+            url: 'contact.php',
             data: data,
             success: function() {
                 toastr.success('Your message has been sent.');
