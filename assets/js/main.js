@@ -52,21 +52,6 @@ $(document).ready(function() {
  
  
  
-  $('#pub-link').on('click', function(e) {
-        e.preventDefault();
-        // if publication component is already loaded:
-        if ($('#_0_').length)
-            return;
-        $component.fadeOut(400, function() {
-            $component.load('pub2 working', function() {
-                resume();
-                $(this).fadeIn(400);
-            });
-        });
-    });
- 
- 
- 
  
 
     $('#gallery-link').on('click', function(e) {
