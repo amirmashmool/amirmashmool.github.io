@@ -58,7 +58,7 @@ $(document).ready(function() {
         if ($('#_5_').length)
             return;
         $component.fadeOut(400, function() {
-            $component.load('pub2', function() {
+            $component.load('pub2 working', function() {
                 resume();
                 $(this).fadeIn(400);
             });
