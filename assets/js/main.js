@@ -55,7 +55,7 @@ $(document).ready(function() {
   $('#pub-link').on('click', function(e) {
         e.preventDefault();
         // if publication component is already loaded:
-        if ($('#_5_').length)
+        if ($('#_0_').length)
             return;
         $component.fadeOut(400, function() {
             $component.load('pub2 working', function() {
