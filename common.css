@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+a {
+	border:0;
+	text-decoration:none;
+/* RED COLOR FOR LINK
+	color:#C00;
+*/
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+img {
+	border:0;
+}
+
+.at {
+	width:10px;
+	height:10px;
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:10pt;
+	background-color:#666;
+	text-align:center;
+	color:#333;
+}
+
+#header {
+	margin:0 auto;
+	padding:0;
+	width:750px;
+	height:0;
+	background-color:#FFF;
+	background-color:#F00;
+}
+
+#content {
+	margin:0 auto;
+	padding:20px 0;
+	width:850px;
+	background-color:#FFF;
+	text-align:left;
+}
+
+#footer {
+	margin:0 auto;
+	border-top:3px solid #999;
+	padding-top:10px;
+	width:850px;
+	background-color:#FFF;
+	font-size:12pt;
+}
+
+
+
+
+#site_menu {
+	margin:0 auto;
+	border-bottom:3px solid #999;
+	padding:0;
+	width:90%;
+/*	
+	height:145px;
+*/	
+	height:35px;
+	width:850px;
+	background-color:#FFF;
+	font-size:13pt;
+}
+
+#site_menu ul {
+	margin:0px;
+	margin-left:40px;
+	padding:0;
+	list-style:none;
+}
+
+#site_menu ul li {
+	margin-left:8px;
+	float:left;
+	line-height:35px;
+}
+
+#site_menu ul li a {
+	display:block;
+	text-decoration:none;
+	color:#333;
+}
+
+#site_menu ul li a:hover {
+	text-decoration:underline;
+}
+
+#site_menu ul #selected_menu {
+	color:#00F;
+	text-decoration:none;
+}
+
+
+
+
+
+
+#site_menu_first {
+	margin:0 auto;
+	border-bottom:3px solid #999;
+	padding:0;
+	width:90%;
+/*
+	height:120px;
+*/
+	height:0 auto;
+	width:850px;
+	background-color:#FFF;
+	font-size:14pt;
+}
+
+#site_menu_first ul {
+	margin-left:10px;
+	padding:0;
+	list-style:none;
+}
+
+#site_menu_first ul li {
+	margin-left:10px;
+	float:left;
+	line-height:35px;
+}
+
+#site_menu_first ul li a {
+	display:block;
+	text-decoration:none;
+	color:#333;
+}
+
+#site_menu_first ul li a:hover {
+	text-decoration:underline;
+}
+
+#site_menu_first ul #selected_menu {
+	color:#00F;
+	text-decoration:none;
+}
+
+
+
+
+
+
+.content_title {
+	margin-bottom:20px;
+	text-align:center;
+	font-size:24pt;
+	font-weight:bold;
+}
+
+.section {
+	margin-top:30px;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+.section_title {
+	margin-bottom:10px;
+	clear:both;
+	font-size:16pt;
+	font-weight:bold;
+}
+
+.section ul li {
+	margin-bottom:0px;
+	/*
+	margin-bottom:5px;
+	*/
+}

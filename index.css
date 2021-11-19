@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.info {
+	margin-left:20px;
+}
+
+.info .at {
+	width:15px;
+	height:15px;
+}
+
+#foto {
+	margin-bottom:30px;
+	margin-right:40px;
+	/*
+	border:5px solid #666;
+	width:130px;
+	height:180px;
+	*/
+	float:left;
+}
+
+#logo {
+	margin-top:10px;
+	margin-bottom:0px;
+	margin-right:20px;
+	/*
+	border:5px solid #666;
+	width:130px;
+	height:180px;
+	*/
+	float:left;
+}
+
+
+.info_content {
+	/*
+	padding-top:25px;
+	font-size:18pt;
+	line-height:25pt;
+	*/
+}
+
+.top {
+	margin-left:930px;
+}
+
+.back {
+	margin-left:860px;
+}
