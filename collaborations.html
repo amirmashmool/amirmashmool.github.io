@@ -10,7 +10,15 @@ Amir Mashmool
   <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="index.css" rel="stylesheet" type="text/css">
-<style type="text/css"></style>
+<style type="text/css">
+ /* Define a CSS style for the image */
+        #erdos_image {
+            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
+            max-width: 100%; /* Set the maximum width of the image to the width of its container */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+            margin-top: 10px; /* Add some top margin for spacing */
+
+</style>
 
 <script language="javascript">
   function toggleDiv(divid)
@@ -165,7 +173,7 @@ Erdős number
 It's a fun way to measure the collaboration and connection between mathematicians. The idea is simple: if you've written a paper with someone who has an Erdos number of 1, then your Erdos number is 2. 
 If you've written a paper with someone who has an Erdos number of 2, your Erdos number is 3, and so on.
 <br>
- <img src="images/erdos.jpg">
+ <img id="erdos_image" src="images/erdos.jpg">
 
 </div> 
 </div> 
