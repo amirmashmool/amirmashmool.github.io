@@ -71,6 +71,16 @@ function topFunction() {
         padding: 20px; /* Adjust padding as needed */
         border-radius: 5px; /* Optional: Rounded corners */
     }
+
+
+  #wordcloud {
+            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
+            max-width: 80%; /* Set the maximum width of the image to the width of its container */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+            margin-top: 5px; /* Add some top margin for spacing */
+            margin-left: auto; /* Set left margin to auto for centering */
+            margin-right: auto; /* Set right margin to auto for centering */
+ }
 </style>
 
 <style>
@@ -133,7 +143,12 @@ function topFunction() {
 
        <script language="JavaScript">
        <!--
-       
+
+
+<br>
+ <img id="wordcloud" src="Images/wordcloud.png">
+<br>
+         
        function random_imglink(){
        var myimages=new Array()
        //specify random images below. You can have as many as you wish
