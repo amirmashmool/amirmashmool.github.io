@@ -4,39 +4,59 @@
 <title> 
 Amir Mashmool
 </title> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <title>Amir Mashmool </title>
  <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
   <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="index.css" rel="stylesheet" type="text/css">
-<style type="text/css"></style>
-
-
-
-
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        p {
-            line-height: 1.6;
-        }
-        .note {
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-        }
-    </style>
 
   
+<script language="javascript">
+  function toggleDiv(divid)
+  {
+  
+    varon = divid + 'on';
+  varoff = divid + 'off';
+
+  if(document.getElementById(varon).style.display == 'block')
+  {
+  document.getElementById(varon).style.display = 'none';
+  document.getElementById(varoff).style.display = 'block';
+  }
+  
+  else
+  { 
+  document.getElementById(varoff).style.display = 'none';
+  document.getElementById(varon).style.display = 'block'
+  }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
 </head> 
  
 <body style="   padding: 10px;    margin: 0px;">
+
 
   <div id="header"></div>
 
@@ -74,6 +94,9 @@ Amir Mashmool
      <li>|</li>
      <li><a id="selected_menu"  href="Note.html">Note</a></li>
     <li>|</li>
+
+  </ul>
+</div>
 
 
 
