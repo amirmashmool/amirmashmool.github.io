@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amir Mashmool</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <meta name="description" content="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <meta name="keywords" content="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+  <link href="common.css" rel="stylesheet" type="text/css">
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    .infront {
+      display: flex;
+    }
+    .infrontt {
+      flex: 1;
+      margin-right: 20px;
+    }
+    #wordcloud {
+      display: block;
+      max-width: 80%;
+      height: auto;
+      margin-top: 5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <script language="javascript">
+    function toggleDiv(divid) {
+      var varon = divid + 'on';
+      var varoff = divid + 'off';
+
+      if (document.getElementById(varon).style.display == 'block') {
+        document.getElementById(varon).style.display = 'none';
+        document.getElementById(varoff).style.display = 'block';
+      } else {
+        document.getElementById(varoff).style.display = 'none';
+        document.getElementById(varon).style.display = 'block';
+      }
+    }
+
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</head>
+
+<body style="padding: 10px; margin: 0px;">
+
+<div id="header"></div>
+
+<div id="site_menu_first">
+  <p>
+    <img id="logo" src="Images/logo.jpg" alt="logo" style="display: block; margin: 0 auto;">
+  </p>
+</div>
+
+<div id="site_menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li>|</li>
+    <li><a href="./cv/amirmashmoolcv.pdf">CV</a></li>
+    <li>|</li>
+    <li><a id="selected_menu" href="Bio.html">Bio</a></li>
+    <li>|</li>
+    <li><a href="research.html">Research</a></li>
+    <li>|</li>
+    <li><a href="publications.html">Publications</a></li>
+    <li>|</li>
+    <li><a href="collaborations.html">Collaborations</a></li>
+    <li>|</li>
+    <li><a href="activities.html">Service</a></li>
+    <li>|</li>
+    <li><a href="projects.html">Projects</a></li>
+    <li>|</li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li>|</li>
+    <li><a href="Misc.html">Misc.</a></li>
+    <li>|</li>
+    <li><a href="Note.html">Note</a></li>
+  </ul>
+</div>
+
+<div id="content">
+  <div class="section">
+    <h1 style="font-size: 2em;">Long Bio</h1>
+    <p><b>Amir Mashmool</b> received his master degree in <b>Computer Science</b> (Data Science and Engineering) from the <a href="https://www.dibris.unige.it/" target="_blank">Department of Informatics, Bioengineering, Robotics and System Engineering (DiBRIS)</a>, <a href="https://unige.it/en " target="_blank">University of Genova (UniGE)</a>, Italy.</p>
+
+    <h1 style="font-size: 2em;">Short Bio (for papers)</h1>
+    <p><b>Amir Mashmool</b> received his....</p>
+
+    <h2>Current Appointment</h2>
+    <ul align="justify">
+      <li>[Nov 2024-now] <a href="https://scholar.google.com/citations?user=h-hiNwcAAAAJ&hl=en" target="_blank">Doctoral Researcher</a> - <a href="https://scholar.google.com/citations?user=h-hiNwcAAAAJ&hl=en" target="_blank">Software Engineering Research Group</a> - <a href="https://scholar.google.com/citations?user=h-hiNwcAAAAJ&hl=en" target="_blank">University of x</a></li>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+      <li>[November 2012-May 2016] Ph.D in Computer Science - <a href="https://scholar.google.com/citations?user=h-hiNwcAAAAJ&hl=en" target="_blank">University of x</a></li>
+      <li>[September 2007-September 2010] MSc in Computer Science (Software) - <a href="https://web.uniroma1.it/dip_diet/en" target="_blank">University of Genova</a></li>
+      <li>[September 2001-December 2006] BSc in Computer Science (Software) - <a href="https://scholar.google.com/citations?user=h-hiNwcAAAAJ&hl=en" target="_blank">Iran University Science and Technology</a></li>
+    </ul>
+
+    <h2>Awards</h2>
+    <ul align="justify">
+      <li>[June 2024-April 2025] <b>UK - EPSRC/DSIT-</b> <a href="https://cheddarhub.org/proposals/" target="_blank"> ORAN-TWIN</a> <font color="red"><b>(PI) (150,000 pounds)</b></font></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
