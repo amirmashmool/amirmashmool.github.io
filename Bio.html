@@ -1,71 +1,94 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Amir Mashmool</title>
+<html> 
+
+<head> 
+<title> 
+Amir Mashmool
+</title> 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <meta name="description" content="This is my personal blog, where I share about my Education, Research and my Activities.">
-  <meta name="keywords" content="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
-  <link href="common.css" rel="stylesheet" type="text/css">
-  <link href="index.css" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    .infront {
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Amir Mashmool </title>
+ <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+ .infront {
       display: flex;
     }
+
     .infrontt {
       flex: 1;
-      margin-right: 20px;
+      margin-right: 20px; /* Adjust the margin as needed */
     }
-    #wordcloud {
-      display: block;
-      max-width: 80%;
-      height: auto;
-      margin-top: 5px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
-  <script language="javascript">
-    function toggleDiv(divid) {
-      var varon = divid + 'on';
-      var varoff = divid + 'off';
+#wordcloud {
+            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
+            max-width: 80%; /* Set the maximum width of the image to the width of its container */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+            margin-top: 5px; /* Add some top margin for spacing */
+            margin-left: auto; /* Set left margin to auto for centering */
+            margin-right: auto; /* Set right margin to auto for centering */
+ }
+</style>
 
-      if (document.getElementById(varon).style.display == 'block') {
-        document.getElementById(varon).style.display = 'none';
-        document.getElementById(varoff).style.display = 'block';
-      } else {
-        document.getElementById(varoff).style.display = 'none';
-        document.getElementById(varon).style.display = 'block';
-      }
-    }
+<script language="javascript">
+  function toggleDiv(divid)
+  {
+  
+    varon = divid + 'on';
+  varoff = divid + 'off';
 
-    window.onscroll = function() { scrollFunction() };
+  if(document.getElementById(varon).style.display == 'block')
+  {
+  document.getElementById(varon).style.display = 'none';
+  document.getElementById(varoff).style.display = 'block';
+  }
+  
+  else
+  { 
+  document.getElementById(varoff).style.display = 'none';
+  document.getElementById(varon).style.display = 'block'
+  }
+}
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("myBtn").style.display = "block";
-      } else {
+    } else {
         document.getElementById("myBtn").style.display = "none";
-      }
     }
+}
 
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-</head>
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
 
-<body style="padding: 10px; margin: 0px;">
+</head> 
+ 
+<body style="   padding: 10px;    margin: 0px;">
 
-<div id="header"></div>
 
-<div id="site_menu_first">
+  <div id="header"></div>
+
+  <div id="site_menu_first">
   <p>
-    <img id="logo" src="Images/logo.jpg" alt="logo" style="display: block; margin: 0 auto;">
+  <img id="logo" src="Images/logo.jpg" alt="logo" style="float:center;" >
+  <br>
+  <br>
+  <br><br><br>
+  <strong style="color: rgb(0, 0, 0); font-family: Trebuchet MS;">
+  <font size="-4">
+  <i><br></i>
+  </font></b></strong>
   </p>
-</div>
+  </div>
 
 <div id="site_menu">
   <ul>
