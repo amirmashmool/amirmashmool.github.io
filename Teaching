@@ -1,0 +1,149 @@
+<html> 
+
+<head> 
+<title> 
+Amir Mashmool
+</title> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Amir Mashmool </title>
+ <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css"></style>
+
+<script language="javascript">
+  function toggleDiv(divid)
+  {
+  
+    varon = divid + 'on';
+  varoff = divid + 'off';
+
+  if(document.getElementById(varon).style.display == 'block')
+  {
+  document.getElementById(varon).style.display = 'none';
+  document.getElementById(varoff).style.display = 'block';
+  }
+  
+  else
+  { 
+  document.getElementById(varoff).style.display = 'none';
+  document.getElementById(varon).style.display = 'block'
+  }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+<style>
+    .Course {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .Course img {
+      width: 150px; /* Adjust according to your image size */
+      margin-right: 16px;
+    }
+
+    .Course-info {
+      flex-grow: 1;
+    }
+
+    .Course-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .Course-info p {
+      font-size: 16px;
+    }
+  </style>
+  
+</head> 
+ 
+<body style="   padding: 10px;    margin: 0px;">
+
+  <div id="header"></div>
+
+  <div id="site_menu_first">
+  <p>
+   <img id="logo" src="Images/logo11.png" alt="logo" style="float:center;" >
+  <br>
+  <br>
+  <br><br><br>
+  <strong style="color: rgb(0, 0, 0); font-family: Trebuchet MS;">
+  <font size="-4">
+  <i><br></i>
+  </font></b></strong>
+  </p>
+  </div>
+  
+  
+<div id="site_menu">
+  <ul>
+    <li><a  href="index.html">Home</a></li>
+    <li>|</li>
+    <li><a href="Bio.html">Bio</a></li>
+    <li>|</li>
+    <li><a href="research.html">Research</a></li>
+    <li>|</li>
+    <li><a id="selected_menu"  href="Teaching.html">Teaching</a></li>
+    <li>|</li>
+    <li><a href="publications.html">Publications</a></li>
+    <li>|</li>
+    <li><a href="collaborations.html">Collaborations</a></li>
+    <li>|</li>
+    <li><a href="activities.html">Service</a></li>
+    <li>|</li>
+    <li><a href="projects.html">projects</a></li>
+    <li>|</li>
+   <li><a href="Gallery.html">Gallery</a></li>
+    <li>|</li>
+    <li><a href="Misc.html">Misc.</a></li>
+    <li>|</li>
+    <li><a href="Note.html">Note</a></li>
+<li>|</li>
+ <li><a href="Contact.html">Contact</a></li>
+
+
+    
+  </ul>
+</div>
+
+<div id="content">
+<div class="section">
+  
+  <div class="Course">
+    <img src="Images/ai-algorithm.png" alt="Course 1">
+    <div class="Course-info">
+      <h2> AI Algorithms : Theory and Engineering</a></h2>
+      <p>This course is a master course at the university of bremen</p>
+    </div>
+  </div>
+  
+
+
+
+
+
+</body> 
+ 
+</html> 
