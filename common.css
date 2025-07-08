@@ -63,7 +63,6 @@ body {
 #site_menu {
 	margin:0 auto;
 	border-bottom:3px solid #999;
-	 margin-top: 40px; /* این باعث میشه از اولی فاصله بگیره */
 	width:90%;
 /*	
 	height:145px;
