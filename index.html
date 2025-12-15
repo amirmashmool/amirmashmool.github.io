@@ -64,15 +64,10 @@ function topFunction() {
   /* ====== Photo Slider ====== */
   let slideIndex = 1;
 
-  const captions = [
-    "Photo 1",
-    "Photo 2",
-    "Photo 3"
-  ];
 
   function showSlides(n) {
     const slides = document.querySelectorAll(".photo-slider .slide");
-    const cap = document.getElementById("slideCaption");
+    
 
     if (slides.length === 0) return;
 
@@ -82,7 +77,7 @@ function topFunction() {
     slides.forEach(s => s.style.display = "none");
     slides[slideIndex - 1].style.display = "block";
 
-    if (cap) cap.textContent = captions[slideIndex - 1] || "";
+ 
   }
 
   function plusSlides(n) {
@@ -234,7 +229,6 @@ function topFunction() {
   <button class="nav next" onclick="plusSlides(1)" aria-label="Next photo">›</button>
 </div>
 
-<div class="caption" id="slideCaption"></div>
 
 
     <div class="info_content">
@@ -320,6 +314,7 @@ I'm always open to collaborating on software engineering. Let's create some join
  
 
 </html> 
+
 
 
 
