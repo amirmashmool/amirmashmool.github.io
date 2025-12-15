@@ -59,6 +59,43 @@ function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 } 
+
+
+  /* ====== Photo Slider ====== */
+  let slideIndex = 1;
+
+  const captions = [
+    "Photo 1",
+    "Photo 2",
+    "Photo 3"
+  ];
+
+  function showSlides(n) {
+    const slides = document.querySelectorAll(".photo-slider .slide");
+    const cap = document.getElementById("slideCaption");
+
+    if (slides.length === 0) return;
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    slides.forEach(s => s.style.display = "none");
+    slides[slideIndex - 1].style.display = "block";
+
+    if (cap) cap.textContent = captions[slideIndex - 1] || "";
+  }
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    showSlides(slideIndex);
+  });
+
+
+
+  
 </script>
 
 <title>Gray Box</title>
@@ -80,6 +117,50 @@ function topFunction() {
             margin-left: auto; /* Set left margin to auto for centering */
             margin-right: auto; /* Set right margin to auto for centering */
  }
+
+
+.photo-slider{
+  position: relative;
+  width: 337px;      /* همون عرض عکس */
+  height: 371px;     /* همون ارتفاع عکس */
+  margin: 0 auto;    /* وسط چین */
+}
+
+.photo-slider .slide{
+  width: 337px;
+  height: 371px;
+  object-fit: cover;
+  display: none;     /* بقیه مخفی */
+  border-radius: 6px;
+}
+
+.photo-slider .nav{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  font-size: 28px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 38px;
+}
+
+.photo-slider .prev{ left: -12px; }
+.photo-slider .next{ right: -12px; }
+
+.caption{
+  text-align: center;
+  margin-top: 8px;
+  font-family: Trebuchet MS;
+  font-size: 13px;
+  color: #333;
+}
+
+  
  }
 </style>
 
@@ -143,7 +224,18 @@ function topFunction() {
 
   <div class="content_title"></div>
 
- <img id="Amirfoto" src="Images/amir mashmool-Photoroom.jpg">
+ <div class="photo-slider">
+  <button class="nav prev" onclick="plusSlides(-1)" aria-label="Previous photo">‹</button>
+
+  <img id="Amirfoto" class="slide" src="Images/amir mashmool-Photoroom.jpg" alt="Amir photo 1">
+  <img id="Amirfoto2" class="slide" src="Images/amir mashmool-Photoroom.jpg" alt="Amir photo 2">
+  <img id="Amirfoto3" class="slide" src="Images/amir mashmool-Photoroom.jpg" alt="Amir photo 3">
+
+  <button class="nav next" onclick="plusSlides(1)" aria-label="Next photo">›</button>
+</div>
+
+<div class="caption" id="slideCaption"></div>
+
 
     <div class="info_content">
 
@@ -228,6 +320,7 @@ I'm always open to collaborating on software engineering. Let's create some join
  
 
 </html> 
+
 
 
 
