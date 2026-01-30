@@ -28,9 +28,9 @@ Amir Mashmool
 
 .coauthors-grid{
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 0.1px 6px;               /* فاصله کمتر */
-  margin-top: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 8px;        /* فاصله بین سطرها */
+  column-gap: 6px;
 }
 
 @media (max-width: 1100px){
@@ -43,7 +43,6 @@ Amir Mashmool
   .coauthors-grid{ grid-template-columns: 1fr; }
 }
 
-/* کارت */
 .coauthor-card{
   background: #fff;
   border: 1px solid rgba(0,0,0,0.08);
@@ -51,8 +50,9 @@ Amir Mashmool
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   transition: transform 140ms ease, box-shadow 140ms ease;
-   transform: scale(0.60);
-   min-width: 200px;
+
+  width: 200px;        /* اندازه واقعی کارت */
+  margin: 0 auto;      /* وسط‌چین داخل ستون */
 }
 
 .coauthor-card:hover{
@@ -408,6 +408,7 @@ It's not the smallest Erdos number out there, but it's still pretty cool to know
 </body> 
  
 </html> 
+
 
 
 
