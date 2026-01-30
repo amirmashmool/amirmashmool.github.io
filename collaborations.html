@@ -20,6 +20,110 @@ Amir Mashmool
             margin-left: auto; /* Set left margin to auto for centering */
             margin-right: auto; /* Set right margin to auto for centering */
  }
+
+
+
+/* ===== Co-authors grid ===== */
+.coauthors-wrap{
+  margin-top: 14px;
+}
+
+.coauthors-grid{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* 5 per row */
+  gap: 18px;
+  margin-top: 12px;
+  padding: 0;
+}
+
+/* responsive */
+@media (max-width: 1100px){
+  .coauthors-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 900px){
+  .coauthors-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 650px){
+  .coauthors-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 420px){
+  .coauthors-grid{ grid-template-columns: 1fr; }
+}
+
+.coauthor-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.coauthor-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+}
+
+.coauthor-photo{
+  width: 100%;
+  aspect-ratio: 1 / 1;         /* مربع */
+  object-fit: cover;           /* کراپ خوشگل */
+  display: block;
+  background: #f2f2f2;
+}
+
+.coauthor-body{
+  padding: 12px 12px 14px;
+  text-align: center;
+  font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+.coauthor-name{
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #0b2447;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.coauthor-name:hover{
+  text-decoration: underline;
+}
+
+.coauthor-role{
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: rgba(0,0,0,0.72);
+  line-height: 1.35;
+}
+
+.coauthor-meta{
+  margin-top: 8px;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.coauthor-badge{
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(0,0,0,0.03);
+  color: rgba(0,0,0,0.75);
+}
+
+.coauthor-flag{
+  width: 16px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
 </style>
 
 <script language="javascript">
@@ -125,59 +229,150 @@ Main Co-Authors in My Publications
 </b>
 </font></strong>
 <br>
-<ul>
+
+
+
+<div class="coauthors-wrap">
+  <div class="coauthors-grid">
+
+    <!-- 1 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/mojtaba-shahin.jpg" alt="Dr Mojtaba Shahin">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=Aml0q7sAAAAJ&hl=en" target="_blank">
+          Dr Mojtaba Shahin
+        </a>
+        <div class="coauthor-role">Assistant Professor — Software Engineering, RMIT University</div>
+        <div class="coauthor-meta">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/peng-liang.jpg" alt="Dr Peng Liang">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=76CoujsAAAAJ&hl=en" target="_blank">
+          Dr Peng Liang
+        </a>
+        <div class="coauthor-role">Professor — Software Engineering, School of Computer Science, Wuhan University</div>
+        <div class="coauthor-meta">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/valentina-lenarduzzi.jpg" alt="Dr Valentina Lenarduzzi">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=HKGXl54AAAAJ&hl=en" target="_blank">
+          Dr Valentina Lenarduzzi
+        </a>
+        <div class="coauthor-role">Assistant Professor (Tenure Track) — University of Oulu (M3S); Docent — LUT University</div>
+        <div class="coauthor-meta">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/amir-mosavi.jpg" alt="Dr Amir Mosavi">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=NoyaZEsAAAAJ&hl=en" target="_blank">
+          Dr Amir Mosavi
+        </a>
+        <div class="coauthor-role">Scientist — Dresden University of Technology; Óbuda University</div>
+        <div class="coauthor-meta">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/shahab-shamshirband.jpg" alt="Dr Shahab Shamshirband">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=yPnZw3cAAAAJ&hl=en" target="_blank">
+          Dr Shahab Shamshirband
+        </a>
+        <div class="coauthor-role">Associate Professor — Computer Science, NYUST (Taiwan)</div>
+        <div class="coauthor-meta">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/mohammad-ghasemi-gol.jpg" alt="Dr Mohammad Ghasemi Gol">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://cv.birjand.ac.ir/ghasemigol/fa" target="_blank">
+          Dr Mohammad Ghasemi Gol
+        </a>
+        <div class="coauthor-role">Assistant Professor — University of Birjand</div>
+        <div class="coauthor-meta">
+          <img class="coauthor-flag" src="Images/ir.png" alt="IR">
+          <span class="coauthor-badge">Profile</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/taghi-javdani-gandomani.jpg" alt="Dr Taghi Javdani Gandomani">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=D_JjdUYAAAAJ&hl=en" target="_blank">
+          Dr Taghi Javdani Gandomani
+        </a>
+        <div class="coauthor-role">Assistant Professor — Shahrekord University</div>
+        <div class="coauthor-meta">
+          <img class="coauthor-flag" src="Images/ir.png" alt="IR">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/roohallah-alizadehsani.jpg" alt="Dr Roohallah Alizadehsani">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=SZxPHPAAAAAJ&hl=en" target="_blank">
+          Dr Roohallah Alizadehsani
+        </a>
+        <div class="coauthor-role">Research Fellow — IISRI, Deakin University, Australia</div>
+        <div class="coauthor-meta">
+          <img class="coauthor-flag" src="Images/ir.png" alt="IR">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/javad-hassannataj-joloudari.jpg" alt="Mr Javad Hassannataj Joloudari">
+      <div class="coauthor-body">
+        <a class="coauthor-name" href="https://scholar.google.com/citations?user=-_1_pF0AAAAJ&hl=en" target="_blank">
+          Mr Javad Hassannataj Joloudari
+        </a>
+        <div class="coauthor-role">Researcher — Artificial Intelligence, University of Birjand</div>
+        <div class="coauthor-meta">
+          <img class="coauthor-flag" src="Images/ir.png" alt="IR">
+          <span class="coauthor-badge">Google Scholar</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
 
   
-  <li>
-<a href="https://scholar.google.com/citations?user=Aml0q7sAAAAJ&hl=en" target="_blank">Dr Mojtaba Shahin</a>,(Assistant Professor) in Software Engineering, RMIT University
-</font>
-<br>
-  
-    <li>
-<a href="https://scholar.google.com/citations?user=76CoujsAAAAJ&hl=en" target="_blank">Dr Peng Liang</a>,Professor in Software Engineering,School of Computer Science, Wuhan University
-</font>
-<br>
-  
-     <li>
-<a href="https://scholar.google.com/citations?user=HKGXl54AAAAJ&hl=en" target="_blank">Dr Valentina Lenarduzzi</a>,Assistant Professor (Tenure Track) - University of Oulu (M3S); Docent LUT University
-</font>
-<br>
-  
-  
-<li>
-<a href="https://scholar.google.com/citations?user=NoyaZEsAAAAJ&hl=en" target="_blank">Dr Amir Mosavi</a>,scientist - Dresden University of Technology, Obuda University
-</font>
-<br>
-
-
-<li>
-<a href="https://scholar.google.com/citations?user=yPnZw3cAAAAJ&hl=en" target="_blank">Dr Shahab Shamshirband</a>, Associate Professor of Computer Science, NYUST (Taiwan)
-</font>
-<br>
-
-<li>
-<a href="https://cv.birjand.ac.ir/ghasemigol/fa" target="_blank">Dr Mohammad Ghasemi Gol</a>,Assistant Professor, University of Birjand <img src="Images/ir.png">
-</font>
-<br>
-
-<li>
-<a href="https://scholar.google.com/citations?user=D_JjdUYAAAAJ&hl=en" target="_blank">Dr Taghi Javdani Gandomani</a>, Assistant Professor, Shahrekord University <img src="Images/ir.png">
-</font>
-<br>
-
-
-<li>
-<a href="https://scholar.google.com/citations?user=SZxPHPAAAAAJ&hl=en" target="_blank">Dr roohallah alizadehsani</a>, Research Fellow, IISRI, Deakin University,Australia <img src="Images/ir.png">
-</font>
-<br>
-
-  
-<li>
-<a href="https://scholar.google.com/citations?user=-_1_pF0AAAAJ&hl=en" target="_blank"> Mr Javad Hassannataj Joloudari</a>, Researcher of Artificial Intelligence, University of Birjand <img src="Images/ir.png">
-</font>
-<br>
-</ul>
-
 <font size="+0">
 <b>
 Erdős number
@@ -217,4 +412,5 @@ It's not the smallest Erdos number out there, but it's still pretty cool to know
 </body> 
  
 </html> 
+
 
