@@ -24,100 +24,110 @@ Amir Mashmool
 
 
 /* ===== Co-authors grid ===== */
-.coauthors-wrap{ margin-top: 14px; }
+.coauthors-wrap{ margin-top: 10px; }
 
 .coauthors-grid{
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)); /* 4 per row */
-  gap: 18px;
-  margin-top: 12px;
-  padding: 0;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;                 /* فاصله کمتر */
+  margin-top: 10px;
 }
 
 @media (max-width: 1100px){
-  .coauthors-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .coauthors-grid{ grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 850px){
-  .coauthors-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .coauthors-grid{ grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 480px){
   .coauthors-grid{ grid-template-columns: 1fr; }
 }
 
+/* کارت */
 .coauthor-card{
   background: #fff;
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 140ms ease, box-shadow 140ms ease;
 }
 
 .coauthor-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.14);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
 }
 
+/* عکس: بخش اصلی کارت */
 .coauthor-photo{
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1;       /* کاملاً مربع */
   object-fit: cover;
   display: block;
-  background: #f2f2f2;
+  background: #eee;
 }
 
+/* بدنه */
 .coauthor-body{
-  padding: 12px 12px 14px;
+  padding: 8px 10px 10px;    /* فشرده */
   text-align: center;
   font-family: Trebuchet MS, Arial, sans-serif;
 }
 
+/* اسم */
 .coauthor-name{
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13.5px;
   color: #0b2447;
+  line-height: 1.2;
+}
+
+/* سمت / دانشگاه */
+.coauthor-role{
+  margin-top: 4px;
+  font-size: 11.8px;
+  color: rgba(0,0,0,0.7);
   line-height: 1.25;
+
+  /* جلوگیری از کشیده شدن بیش از حد */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     /* حداکثر 3 خط */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* لینک دکمه‌ای برای Google Scholar */
+/* لینک‌ها */
 .coauthor-links{
-  margin-top: 10px;
+  margin-top: 6px;
   display: flex;
-  gap: 8px;
   justify-content: center;
-  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
 }
 
+/* دکمه */
 .coauthor-btn{
-  display: inline-block;
-  font-size: 12px;
-  padding: 6px 10px;
+  font-size: 11px;
+  padding: 4px 8px;
   border-radius: 999px;
   text-decoration: none;
   border: 1px solid rgba(0,0,0,0.12);
-  background: rgba(0,0,0,0.03);
-  color: rgba(0,0,0,0.78);
-  transition: transform 120ms ease, background 120ms ease;
+  background: rgba(0,0,0,0.04);
+  color: rgba(0,0,0,0.8);
+  transition: background 120ms ease, transform 120ms ease;
 }
 
 .coauthor-btn:hover{
+  background: rgba(0,0,0,0.08);
   transform: translateY(-1px);
-  background: rgba(0,0,0,0.06);
 }
 
-.coauthor-role{
-  margin-top: 6px;
-  font-size: 12.5px;
-  color: rgba(0,0,0,0.72);
-  line-height: 1.35;
-}
-
+/* پرچم */
 .coauthor-flag{
-  width: 16px;
-  height: 12px;
-  object-fit: cover;
-  border-radius: 3px;
-  border: 1px solid rgba(0,0,0,0.10);
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 </style>
@@ -429,6 +439,7 @@ It's not the smallest Erdos number out there, but it's still pretty cool to know
 </body> 
  
 </html> 
+
 
 
 
