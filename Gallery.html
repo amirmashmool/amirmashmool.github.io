@@ -18,50 +18,15 @@
       background-color: #fff;
     }
 
-    #site_menu ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 10px;
-    }
-
-    #site_menu ul li {
-      display: inline;
-    }
-
-    #site_menu ul li a {
-      text-decoration: none;
-      color: #000;
-      padding: 5px 10px;
-    }
-
-    #site_menu ul li a#selected_menu {
-      font-weight: bold;
-      color: #0077cc;
-    }
-
-    h2 {
-      margin-top: 40px;
-      margin-bottom: 10px;
-      font-size: 1.3em;
-      color: #222;
-    }
-
-    p {
-      text-align: justify;
+    /* گالری‌ها */
+    .gallery-section {
+      margin-bottom: 50px;
     }
 
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 15px;
-      justify-items: center;
-      margin-top: 10px;
-      margin-bottom: 40px;
     }
 
     .gallery img {
@@ -132,10 +97,12 @@
       });
     });
   </script>
+
 </head> 
 
 <body>
 
+  <!-- حفظ هدر و منو -->
   <div id="header"></div>
 
   <div id="site_menu_first">
@@ -181,66 +148,74 @@
         - Meeting with Nico and Kishan after exam day. 20 March 2025 <br>
         - Opening Symposium of the DFG funded research training group (CAUSE). 13 June 2025 <br>
         - In-person meeting of the DFG-funded research training group (CAUSE). 5-6 Nov 2025 <br>
-        - Summer School on Empirical Research Methods in Software Engineering and Informatics (ERMSEI 2025), held in Rennes, France.  1-5 September 2025<br>
+        - Summer School on Empirical Research Methods in Software Engineering and Informatics (ERMSEI 2025), held in Rennes, France. 1-5 September 2025 <br>
         - Group photo with my students – Software Project course, Winter Semester 2025/2026
       </p>
-      <div class="gallery">
-        <img src="Images/examday.jpg" alt="Meeting with Nico and Kishan" onclick="openModal('Images/examday.jpg','Meeting with Nico and Kishan')">
-        <img src="Images/cause.jpg" alt="Opening Symposium" onclick="openModal('Images/cause.jpg','Opening Symposium')">
-        <img src="Images/CAUSE-NOV.jpg" alt="DFG CAUSE Meeting" onclick="openModal('Images/CAUSE-NOV.jpg','DFG CAUSE Meeting')">
-        <img src="Images/summer.jpg" alt="Summer School Rennes" onclick="openModal('Images/summer.jpg','Summer School Rennes')">
-        <img src="Images/my students.jpg" alt="Group Photo Software Project" onclick="openModal('Images/my students.jpg','Group Photo Software Project')">
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/examday.jpg" alt="Meeting with Nico and Kishan" onclick="openModal('Images/examday.jpg','Meeting with Nico and Kishan')">
+          <img src="Images/cause.jpg" alt="Opening Symposium" onclick="openModal('Images/cause.jpg','Opening Symposium')">
+          <img src="Images/CAUSE-NOV.jpg" alt="DFG CAUSE Meeting" onclick="openModal('Images/CAUSE-NOV.jpg','DFG CAUSE Meeting')">
+          <img src="Images/summer.jpg" alt="Summer School Rennes" onclick="openModal('Images/summer.jpg','Summer School Rennes')">
+          <img src="Images/my students.jpg" alt="Group Photo Software Project" onclick="openModal('Images/my students.jpg','Group Photo Software Project')">
+        </div>
       </div>
 
       <!-- University of Genova -->
       <h2>University of Genova</h2>
       <p>Thesis Defence and Graduation Ceremony, 30th and 31st of July, 2024</p>
-      <div class="gallery">
-        <img src="Images/m1.JPG" alt="Genova Photo 1" onclick="openModal('Images/m1.JPG','Genova Photo 1')">
-        <img src="Images/m2.JPG" alt="Genova Photo 2" onclick="openModal('Images/m2.JPG','Genova Photo 2')">
-        <img src="Images/m6.JPEG" alt="Genova Photo 3" onclick="openModal('Images/m6.JPEG','Genova Photo 3')">
-        <img src="Images/m5.JPG" alt="Genova Photo 4" onclick="openModal('Images/m5.JPG','Genova Photo 4')">
-        <img src="Images/m4.JPG" alt="Genova Photo 5" onclick="openModal('Images/m4.JPG','Genova Photo 5')">
-        <img src="Images/m3.JPG" alt="Genova Photo 6" onclick="openModal('Images/m3.JPG','Genova Photo 6')">
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/m1.JPG" alt="Genova Photo 1" onclick="openModal('Images/m1.JPG','Genova Photo 1')">
+          <img src="Images/m2.JPG" alt="Genova Photo 2" onclick="openModal('Images/m2.JPG','Genova Photo 2')">
+          <img src="Images/m6.JPEG" alt="Genova Photo 3" onclick="openModal('Images/m6.JPEG','Genova Photo 3')">
+          <img src="Images/m5.JPG" alt="Genova Photo 4" onclick="openModal('Images/m5.JPG','Genova Photo 4')">
+          <img src="Images/m4.JPG" alt="Genova Photo 5" onclick="openModal('Images/m4.JPG','Genova Photo 5')">
+          <img src="Images/m3.JPG" alt="Genova Photo 6" onclick="openModal('Images/m3.JPG','Genova Photo 6')">
+        </div>
       </div>
 
       <!-- University of Birjand -->
       <h2>University of Birjand</h2>
-      <p>ACM ,University of Birjand, 1 May 2018 </p>
-      <div class="gallery">
-        <img src="Images/acm1.jpg" alt="ACM Photo 1" onclick="openModal('Images/acm1.jpg','ACM Photo 1')">
-        <img src="Images/acm2.jpg" alt="ACM Photo 2" onclick="openModal('Images/acm2.jpg','ACM Photo 2')">
-        <img src="Images/acm3.jpg" alt="ACM Photo 3" onclick="openModal('Images/acm3.jpg','ACM Photo 3')">
-        <img src="Images/acm4.jpg" alt="ACM Photo 4" onclick="openModal('Images/acm4.jpg','ACM Photo 4')">
-        <img src="Images/acm5.jpg" alt="ACM Photo 5" onclick="openModal('Images/acm5.jpg','ACM Photo 5')">
-        <img src="Images/acm6.jpg" alt="ACM Photo 6" onclick="openModal('Images/acm6.jpg','ACM Photo 6')">
+      <p>ACM, University of Birjand, 1 May 2018</p>
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/acm1.jpg" alt="ACM Photo 1" onclick="openModal('Images/acm1.jpg','ACM Photo 1')">
+          <img src="Images/acm2.jpg" alt="ACM Photo 2" onclick="openModal('Images/acm2.jpg','ACM Photo 2')">
+          <img src="Images/acm3.jpg" alt="ACM Photo 3" onclick="openModal('Images/acm3.jpg','ACM Photo 3')">
+          <img src="Images/acm4.jpg" alt="ACM Photo 4" onclick="openModal('Images/acm4.jpg','ACM Photo 4')">
+          <img src="Images/acm5.jpg" alt="ACM Photo 5" onclick="openModal('Images/acm5.jpg','ACM Photo 5')">
+          <img src="Images/acm6.jpg" alt="ACM Photo 6" onclick="openModal('Images/acm6.jpg','ACM Photo 6')">
+        </div>
       </div>
 
       <!-- Imam Hussein High School -->
       <h2>Imam Hussein High School</h2>
       <p>With my classmate on a snowy day in 2016.</p>
-      <div class="gallery">
-        <img src="Images/high school1.jpg" alt="High School Photo 1" onclick="openModal('Images/high school1.jpg','High School Photo 1')">
-        <img src="Images/high school2.jpg" alt="High School Photo 2" onclick="openModal('Images/high school2.jpg','High School Photo 2')">
-        <img src="Images/high school3.jpg" alt="High School Photo 3" onclick="openModal('Images/high school3.jpg','High School Photo 3')">
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/high school1.jpg" alt="High School Photo 1" onclick="openModal('Images/high school1.jpg','High School Photo 1')">
+          <img src="Images/high school2.jpg" alt="High School Photo 2" onclick="openModal('Images/high school2.jpg','High School Photo 2')">
+          <img src="Images/high school3.jpg" alt="High School Photo 3" onclick="openModal('Images/high school3.jpg','High School Photo 3')">
+        </div>
       </div>
 
       <!-- Hazrat Mahdi Middle School -->
       <h2>Hazrat Mahdi Middle School</h2>
       <p>With my classmate in 2015 or 2016.</p>
-      <div class="gallery">
-        <img src="Images/mid school1.JPG" alt="Middle School Photo" onclick="openModal('Images/mid school1.JPG','Middle School Photo')">
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/mid school1.JPG" alt="Middle School Photo" onclick="openModal('Images/mid school1.JPG','Middle School Photo')">
+        </div>
       </div>
-
-      <!-- Elementary School -->
-      <h2>Elementary School</h2>
-      <p>Will be added :)</p>
 
       <!-- Childhood -->
       <h2>Childhood</h2>
       <p>When I was a child :)</p>
-      <div class="gallery">
-        <img src="Images/chilhood1.JPG" alt="Childhood Photo" onclick="openModal('Images/chilhood1.JPG','Childhood Photo')">
+      <div class="gallery-section">
+        <div class="gallery">
+          <img src="Images/chilhood1.JPG" alt="Childhood Photo" onclick="openModal('Images/chilhood1.JPG','Childhood Photo')">
+        </div>
       </div>
 
     </div>
