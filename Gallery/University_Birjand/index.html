@@ -11,10 +11,9 @@
 <style>
 /* --- استایل کارت‌ها مشابه سایت قبلی --- */
 .folder-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 20px;
-    justify-content: center;
     margin-top: 20px;
 }
 
