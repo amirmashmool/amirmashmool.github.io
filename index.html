@@ -122,12 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <style>
     /* CSS for gray box */
     .gray-box {
-        background-color: #ccc; /* Gray color */
-        width: 685px; /* Adjust width as needed */
-        height: 40px; /* Adjust height as needed */
-        padding: 20px; /* Adjust padding as needed */
-        border-radius: 5px; /* Optional: Rounded corners */
-    }
+    background-color: #ccc;
+    max-width: 90%;      /* حداکثر 90% از عرض صفحه */
+    width: 100%;          /* تا جای ممکن گسترش یابد */
+    padding: 15px;        /* padding مناسب */
+    border-radius: 5px;
+    margin: 20px auto;    /* وسط صفحه */
+    box-sizing: border-box; /* padding داخل width حساب شود */
+}
 
 
   #Amirfoto {
