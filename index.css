@@ -18,17 +18,11 @@
 }
 
 #logo {
-	*/
-	margin-top:10px; */
-	margin-bottom:0px;
-	margin-right:20px;
-	/*
-	width:800px;
-	height:180px;
-	float:left;
-	*/
+    display: block;          /* لوگو وسط صفحه */
+    max-width: 300px;        /* حداکثر عرض لوگو */
+    height: auto;            /* حفظ نسبت تصویر */
+    margin: 10px auto;       /* فاصله بالا 10px و مرکز افقی */
 }
-
 
 .info_content {
 	/*
