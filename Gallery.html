@@ -10,10 +10,31 @@
 
 <style>
 /* استایل گالری پوشه‌ها */
-.folder-list { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px; }
-.folder { width:200px; text-align:center; border:1px solid #ccc; padding:10px; border-radius:8px; transition:transform 0.2s; cursor:pointer; }
+.folder-list {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.folder { 
+  text-align:center; 
+  border:1px solid #ccc; 
+  padding:10px; 
+  border-radius:8px; 
+  transition:transform 0.2s; 
+  cursor:pointer; 
+}
+
 .folder:hover { transform:scale(1.05); box-shadow:0 4px 10px rgba(0,0,0,0.2); }
-.folder img { width:100%; height:150px; object-fit:cover; border-radius:6px; }
+
+.folder img { 
+  width:100%; 
+  height:150px; 
+  object-fit:cover; 
+  border-radius:6px; 
+}
+
 .folder p { margin-top:8px; font-weight:bold; }
 </style>
 </head> 
