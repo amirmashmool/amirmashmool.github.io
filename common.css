@@ -36,17 +36,17 @@ body {
 /* =================== */
 
 /* همه بخش‌ها هم‌عرض و ریسپانسیو */
-/* #header,
+ #header,
 #site_menu_first,
 #site_menu,
 #content,
 #footer {
     width: 100%;
-    max-width: 1200px;  */  /* حداکثر عرض برای دسکتاپ */
- */   margin: 0 auto; */
- */   box-sizing: border-box; */
-  */  padding: 0 20px;   */   /* فاصله داخلی از کناره‌ها */
-} */ */
+    max-width: 1200px;   /* حداکثر عرض برای دسکتاپ */
+  margin: 0 auto; 
+  box-sizing: border-box; 
+ padding: 0 20px;   /* فاصله داخلی از کناره‌ها */
+} 
 
 /* هدر */
 #header {
