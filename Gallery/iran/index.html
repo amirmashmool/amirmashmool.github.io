@@ -12,9 +12,13 @@
 /* --- استایل کارت‌ها مشابه سایت قبلی --- */
 .folder-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
+
+    /* اضافه کردن حاشیه داخلی برای یکسان کردن فاصله‌ها از کناره‌ها */
+    padding: 0 20px; 
+    box-sizing: border-box;
 }
 
 .folder {
