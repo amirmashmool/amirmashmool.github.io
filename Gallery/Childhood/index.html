@@ -12,9 +12,23 @@
 /* --- استایل کارت‌ها مشابه سایت قبلی --- */
 .folder-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(3, 1fr); /* دسکتاپ: 3 عکس در ردیف */
     gap: 20px;
     margin-top: 20px;
+    padding: 0 20px; /* فاصله ثابت از کناره‌ها */
+    box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+    .folder-list {
+        grid-template-columns: repeat(2, 1fr); /* موبایل/تبلت: 2 عکس در ردیف */
+    }
+}
+
+@media (max-width: 500px) {
+    .folder-list {
+        grid-template-columns: 1fr; /* موبایل خیلی کوچک: 1 عکس در ردیف */
+    }
 }
 
 .folder {
