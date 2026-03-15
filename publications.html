@@ -1,89 +1,217 @@
-
-<html>
-  <head> 
-    <title> 
-    Amir Mashmool
-    </title> 
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <title>Amir Mashmool - Publications</title> 
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-      <title>Amir Mashmool </title>
-     <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
-      <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+    <META NAME="DESCRIPTION" CONTENT="Publications of Amir Mashmool, research in software engineering, AI, and edge computing.">
+    <META NAME="KEYWORDS" CONTENT="Amir Mashmool, Mashmool, publications, papers, thesis">
     <link href="common.css" rel="stylesheet" type="text/css">
     <link href="index.css" rel="stylesheet" type="text/css">
-    <style type="text/css"></style>
     
-    <script language="javascript">
-      function toggleDiv(divid)
-      {
-      
-        varon = divid + 'on';
-      varoff = divid + 'off';
+    <!-- Font Awesome for PDF icons (lightweight) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-      if(document.getElementById(varon).style.display == 'block')
-      {
-      document.getElementById(varon).style.display = 'none';
-      document.getElementById(varoff).style.display = 'block';
-      }
-      
-      else
-      { 
-      document.getElementById(varoff).style.display = 'none';
-      document.getElementById(varon).style.display = 'block'
-      }
-    }
-    
-    
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-    
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            document.getElementById("myBtn").style.display = "block";
-        } else {
-            document.getElementById("myBtn").style.display = "none";
+    <style>
+        /* Override any potential global list-style none from site's CSS */
+        .pub-list {
+            list-style-type: decimal !important;
+            padding-left: 2em !important;
+            margin: 0 0 1.5rem 0 !important;
         }
-    }
-    
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    } 
+        .pub-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #1e2f4a;
+        }
+        .pub-content {
+            flex: 1;
+        }
+        .pub-content a {
+            color: #1e3a6b;
+            text-decoration: none;
+            border-bottom: 1px dotted #9bb0cc;
+        }
+        .pub-content a:hover {
+            border-bottom: 1px solid #1e3a6b;
+        }
+        /* PDF icon link – small and clean, aligned right */
+        .pdf-icon {
+            color: #b33c1f;
+            font-size: 1rem;
+            line-height: 1;
+            padding: 0 0.3rem;
+            white-space: nowrap;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: background 0.1s;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            margin-left: auto;
+        }
+        .pdf-icon i {
+            font-size: 1rem;
+        }
+        .pdf-icon:hover {
+            background: #ffeae5;
+            border-color: #d6b0a3;
+            border-radius: 16px;
+        }
+        /* Section headings */
+        .section-heading {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0b2b4f;
+            border-bottom: 1px solid #c0cbd9;
+            padding-bottom: 0.2rem;
+            margin: 2rem 0 1.2rem 0;
+            letter-spacing: 0.3px;
+        }
+        /* compact thesis card – unchanged */
+        .thesis-compact {
+            margin: 1em 0 2em 0;
+            padding: 0.8em 1em;
+            background: #f6f9fe;
+            border: 1px solid #dce5f0;
+            border-radius: 10px;
+            font-size: 0.95rem;
+        }
+        .thesis-compact .badge-line {
+            margin-bottom: 0.4em;
+            font-size: 0.8rem;
+        }
+        .thesis-compact .badge {
+            background: #e2eaf5;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            margin-right: 0.5rem;
+            border: 1px solid #bccde0;
+            font-size: 0.75rem;
+            white-space: nowrap;
+        }
+        .thesis-compact .badge i {
+            margin-right: 0.2rem;
+            font-size: 0.7rem;
+            color: #2b4f7c;
+        }
+        .thesis-compact .title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0b1e3a;
+            margin: 0.3rem 0 0.2rem 0;
+            line-height: 1.4;
+        }
+        .thesis-compact .meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem 1.5rem;
+            margin: 0.4rem 0 0.2rem 0;
+        }
+        .thesis-compact .author {
+            font-weight: 600;
+            color: #1f3f6b;
+        }
+        .thesis-compact .date {
+            color: #3a5777;
+            background: #eef3f9;
+            padding: 0.1rem 1rem;
+            border-radius: 30px;
+            border: 1px solid #cbd8ec;
+            font-size: 0.8rem;
+        }
+        .thesis-compact .pdf-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.2rem;
+            background: #e4ebf5;
+            padding: 0.15rem 0.9rem 0.15rem 0.6rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #0e2f53;
+            text-decoration: none;
+            border: 1px solid #b0c3dd;
+        }
+        .thesis-compact .pdf-link i {
+            font-size: 0.8rem;
+            color: #b13e3e;
+        }
+        .thesis-compact .small-note {
+            font-size: 0.78rem;
+            color: #4b6589;
+            margin-top: 0.4rem;
+            border-top: 1px dashed #c9d6e8;
+            padding-top: 0.4rem;
+        }
+        /* top button (unchanged) */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #2b4f7c;
+            color: white;
+            cursor: pointer;
+            padding: 10px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            box-shadow: 0 4px 12px #00000030;
+        }
+        #myBtn:hover { background-color: #1f3a5c; }
+    </style>
+
+    <script>
+      function toggleDiv(divid) {
+        varon = divid + 'on';
+        varoff = divid + 'off';
+        if(document.getElementById(varon).style.display == 'block') {
+          document.getElementById(varon).style.display = 'none';
+          document.getElementById(varoff).style.display = 'block';
+        } else { 
+          document.getElementById(varoff).style.display = 'none';
+          document.getElementById(varon).style.display = 'block'
+        }
+      }
+      
+      window.onscroll = function() { scrollFunction() };
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+      function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+      } 
     </script>
+</head> 
 
-
-
-    
-    </head> 
-     
-    <body style="   padding: 3px;    margin: 0px;">
-    
+<body style="padding: 3px; margin: 0px;">   <!-- original body style preserved -->
       
   <div id="header"></div>
 
   <div id="site_menu_first">
-  <p>
-  <img id="logo" src="Images/d2.png" alt="logo" style="float:center;" >
-  <br>
-  <br>
-  <br><br><br>
-  <strong style="color: rgb(0, 0, 0); font-family: Trebuchet MS;">
-  <font size="-4">
-  <i><br></i>
-  </font></b></strong>
-  </p>
+      <img id="logo" src="Images/d2.png" alt="logo">
   </div>
       
-      
-    <div id="site_menu">
+  <div id="site_menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li>|</li>
-      <li><a href="Bio.html">Bio</a></li>
+        <li><a href="Bio.html">Bio</a></li>
         <li>|</li>
         <li><a href="research.html">Research</a></li>
-        <li>|</li>
-        <li><a href="Teaching.html">Teaching</a></li>
         <li>|</li>
         <li><a id="selected_menu" href="publications.html">Publications</a></li>
         <li>|</li>
@@ -93,84 +221,129 @@
         <li>|</li>
         <li><a href="projects.html">Projects</a></li>
         <li>|</li>
- <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
         <li>|</li>
-    <li><a href="Misc.html">Misc.</a></li>
-    <li>|</li>
-    <li><a href="Note.html">Note</a></li>
-<li>|</li>
-   <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Misc.html">Misc.</a></li>
+        <li>|</li>
+        <li><a href="Note.html">Note</a></li>
+        <li>|</li>
+        <li><a href="Contact.html">Contact</a></li>
       </ul>
-    </div>
-
-<div id="content">
-<div class="section">
-
-
-<p align="justify">
-<b>Notice.</b> 
-The publications on this website have appeared in journals or conference records published by the IEEE or other organizations. 
-This material is presented here to ensure the timely dissemination of scholarly and technical work. 
-Copyright and all rights therein are retained by authors or by the copyright holders. All persons accessing this information are expected to adhere to the terms and constraints invoked by each case's copyright. 
-
-<br>
-<br>
-<br>
-
-<a name="pubbook"></a> 
-<font face="Times New Roman" size="4"> <b>Papers related to Software Engineering</b> </font>  <br><br>
-<ol start="1" align="justify">
-  
-</li><li><img border="0" alt="IOS Press" src="./Images/ieeelogo.gif">Gandomani, Taghi Javdani, <b>Amir Mashmool</b>, Maedeh Dashti, Samiyeh Khosravi, Mona Najafi Sarpiri, Mahsa Radnejad, Mahnaz Afshari, and Shahin Mansouri.  <a href= "https://ieeexplore.ieee.org/abstract/document/9431902" target ="_blank"> "Talent management in agile software development: The state of the art."</a> In 2021 3rd East Indonesia Conference on Computer and Information Technology (EIConCIT), pp. 156-160. IEEE, 2021.
-</li>
-<br>   
-</li><li><img border="0" alt="IOS Press" src="./Images/ieeelogo.gif"> <b>A. Mashmool</b>, S. Khosravi, J. H. Joloudari, I. Inayat, T. J. Gandomani and A. Mosavi. <a href= "https://ieeexplore.ieee.org/document/9667902" target ="_blank">"A Statistical Model to Assess the Team’s Productivity in Agile Software Teams,"</a>  2021 IEEE 4th International Conference and Workshop Óbuda on Electrical and Power Engineering (CANDO-EPE), 2021, pp. 11-18, doi: 10.1109/CANDO-EPE54223.2021.9667902.
-</li>
-<br>     
-</li><li>Ali, Rezaei Nasab, Shahin Mojtaba, Hoseyni Raviz Seyed Ali, Liang Peng, <b>Mashmool Amir</b>, and Lenarduzzi Valentina <a href= "https://www.sciencedirect.com/science/article/abs/pii/S0164121222002394" target ="_blank"> "An empirical study of security practices for microservices systems"</a>Journal of Systems and Software, 111563..
-</li>
-<br>    
-</li><li>Qamar, Nosheen, Nosheen Sabahat, <b> Amir Mashmool</b>, and Amir Mosavi. <a href= "https://arxiv.org/abs/2304.14255" target ="_blank"> "Evaluating the impact of pair documentation on requirements quality and team productivity."</a> arXiv preprint arXiv:2304.14255 (2023).
-</li>
-  
-</ol>
-<p align="right"><a href="javascript:;" onclick="topFunction()" id="myBtn" title="Go to top">Top</a></p>
-<br>
-<br>
-<br>
-<a name="pubbook"></a> 
-<font face="Times New Roman" size="4"> <b>Papers related to AI and Application of AI</b> </font> <br><br>
-<ol start="1" align="justify">
-</li><li><b>Mashmool, Amir</b>, Giorgio Delzanno, Hamid Saadatfar, Aakash Ahmad, Rainer Koschke, Roohallah Alizadehsani, U. Rajendra Acharya, and Daniele D'Agostino.<a href= "https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.70069" target ="_blank">  "Edge Computing in Healthcare Using Machine Learning: A Systematic Literature Review."</a> Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 16, no. 1 (2026): e70069.
-</li>
- <br>  
-</li><li><img border="0" alt="IOS Press" src="./Images/ieeelogo.gif">Joloudari, Javad Hassannataj, Mojtaba Haderbadi, <b>Amir Mashmool</b>, Mohammad GhasemiGol, Shahab S. Band, and Amir Mosavi. <a href= "https://ieeexplore.ieee.org/abstract/document/9214817/" target ="_blank"> "Early detection of the advanced persistent threat attack using performance analysis of deep learning."</a> IEEE Access 8 (2020): 186125-186137
-</li>
- <br>
-</li><li>Habibi, Hossein, Abbas Rasoolzadegan,<b> Amir Mashmool</b>, Shahab S. Band, Anthony Theodore Chronopoulos, and Amir Mosavi. <a href= "https://www.aimspress.com/article/doi/10.3934/mbe.2022068" target ="_blank">  "SaaSRec+: a new context-aware recommendation method for SaaS services."</a> Mathematical Biosciences and Engineering 19, no. 2 (2022): 1471-1495.
-</li>
- <br>   
-</li><li>Joloudari, Javad Hassannataj, Sanaz Mojrian, Issa Nodehi,<b> Amir Mashmool</b>, Zeynab Kiani Zadegan, Sahar Khanjani Shirkharkolaie, Tahereh Tamadon et al. <a href= "https://iopscience.iop.org/article/10.1088/1361-6579/ac7fd9" target ="_blank"> "Application of artificial intelligence techniques for automated detection of myocardial infarction: a review"</a> arXiv preprint arXiv:2107.06179 (2021).
-</li>
-<br>    
-</li><li>Shafiezadeh, Behnoud, <b> Amir Mashmool</b>, Farshad Eshghi, and Manoochehr Kelarestaghi. <a href= "https://arxiv.org/abs/2509.06868" target ="_blank">"A New Hybrid Model of Generative Adversarial Network and You Only Look Once Algorithm for Automatic License-Plate Recognition."</a> arXiv preprint arXiv:2509.06868 (2025).
-</li>
-  
-</ol>  
- 
-<p align="right"><a href="javascript:;" onclick="topFunction()" id="myBtn" title="Go to top">Top</a></p>
-<br>
-
-
-<font color="black">
-
-
   </div>
-</div>
 
+  <div id="content">
+    <div class="section">
+      <p align="justify" style="font-size:0.95rem; color:#2e3f5e;">
+        <b>Notice.</b> 
+        The publications on this website have appeared in journals or conference records published by the IEEE or other organizations. 
+        This material is presented here to ensure the timely dissemination of scholarly and technical work. 
+        Copyright and all rights therein are retained by authors or by the copyright holders.
+      </p>
+      
+      <!-- ********** SOFTWARE ENGINEERING PAPERS (numbered) ********** -->
+      <div class="section-heading">Papers related to Software Engineering</div>
+      <ol class="pub-list">
+        <li class="pub-item">
+          <span class="pub-content">
+            Gandomani, Taghi Javdani, <b>Amir Mashmool</b>, Maedeh Dashti, Samiyeh Khosravi, Mona Najafi Sarpiri, Mahsa Radnejad, Mahnaz Afshari, and Shahin Mansouri.
+            <a href="https://ieeexplore.ieee.org/abstract/document/9431902" target="_blank">"Talent management in agile software development: The state of the art."</a>
+            In 2021 3rd East Indonesia Conference on Computer and Information Technology (EIConCIT), pp. 156-160. IEEE, 2021.
+          </span>
+          <a href="./publication-pdf/talent.pdf" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            <b>A. Mashmool</b>, S. Khosravi, J. H. Joloudari, I. Inayat, T. J. Gandomani and A. Mosavi.
+            <a href="https://ieeexplore.ieee.org/document/9667902" target="_blank">"A Statistical Model to Assess the Team’s Productivity in Agile Software Teams,"</a>
+            2021 IEEE 4th International Conference and Workshop Óbuda on Electrical and Power Engineering (CANDO-EPE), 2021, pp. 11-18, doi: 10.1109/CANDO-EPE54223.2021.9667902.
+          </span>
+          <a href="https://ieeexplore.ieee.org/document/9667902" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Ali, Rezaei Nasab, Shahin Mojtaba, Hoseyni Raviz Seyed Ali, Liang Peng, <b>Mashmool Amir</b>, and Lenarduzzi Valentina.
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0164121222002394" target="_blank">"An empirical study of security practices for microservices systems"</a>
+            Journal of Systems and Software, 111563.
+          </span>
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0164121222002394" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Qamar, Nosheen, Nosheen Sabahat, <b>Amir Mashmool</b>, and Amir Mosavi.
+            <a href="https://arxiv.org/abs/2304.14255" target="_blank">"Evaluating the impact of pair documentation on requirements quality and team productivity."</a>
+            arXiv preprint arXiv:2304.14255 (2023).
+          </span>
+          <a href="https://arxiv.org/abs/2304.14255" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+      </ol>
+      
+      <!-- ********** AI AND APPLICATION OF AI PAPERS (numbered) ********** -->
+      <div class="section-heading">Papers related to AI and Application of AI</div>
+      <ol class="pub-list">
+        <li class="pub-item">
+          <span class="pub-content">
+            <b>Mashmool, Amir</b>, Giorgio Delzanno, Hamid Saadatfar, Aakash Ahmad, Rainer Koschke, Roohallah Alizadehsani, U. Rajendra Acharya, and Daniele D'Agostino.
+            <a href="https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.70069" target="_blank">"Edge Computing in Healthcare Using Machine Learning: A Systematic Literature Review."</a>
+            Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery 16, no. 1 (2026): e70069.
+          </span>
+          <a href="https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.70069" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Joloudari, Javad Hassannataj, Mojtaba Haderbadi, <b>Amir Mashmool</b>, Mohammad GhasemiGol, Shahab S. Band, and Amir Mosavi.
+            <a href="https://ieeexplore.ieee.org/abstract/document/9214817/" target="_blank">"Early detection of the advanced persistent threat attack using performance analysis of deep learning."</a>
+            IEEE Access 8 (2020): 186125-186137.
+          </span>
+          <a href="https://ieeexplore.ieee.org/abstract/document/9214817/" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Habibi, Hossein, Abbas Rasoolzadegan, <b>Amir Mashmool</b>, Shahab S. Band, Anthony Theodore Chronopoulos, and Amir Mosavi.
+            <a href="https://www.aimspress.com/article/doi/10.3934/mbe.2022068" target="_blank">"SaaSRec+: a new context-aware recommendation method for SaaS services."</a>
+            Mathematical Biosciences and Engineering 19, no. 2 (2022): 1471-1495.
+          </span>
+          <a href="https://www.aimspress.com/article/doi/10.3934/mbe.2022068" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Joloudari, Javad Hassannataj, Sanaz Mojrian, Issa Nodehi, <b>Amir Mashmool</b>, Zeynab Kiani Zadegan, Sahar Khanjani Shirkharkolaie, Tahereh Tamadon et al.
+            <a href="https://iopscience.iop.org/article/10.1088/1361-6579/ac7fd9" target="_blank">"Application of artificial intelligence techniques for automated detection of myocardial infarction: a review"</a>
+            IOP Publishing, 2022 (also arXiv:2107.06179).
+          </span>
+          <a href="https://iopscience.iop.org/article/10.1088/1361-6579/ac7fd9" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+        <li class="pub-item">
+          <span class="pub-content">
+            Shafiezadeh, Behnoud, <b>Amir Mashmool</b>, Farshad Eshghi, and Manoochehr Kelarestaghi.
+            <a href="https://arxiv.org/abs/2509.06868" target="_blank">"A New Hybrid Model of Generative Adversarial Network and You Only Look Once Algorithm for Automatic License-Plate Recognition."</a>
+            arXiv preprint arXiv:2509.06868 (2025).
+          </span>
+          <a href="https://arxiv.org/abs/2509.06868" target="_blank" class="pdf-icon" title="Download PDF"><i class="fas fa-file-pdf"></i></a>
+        </li>
+      </ol>
+      
+      <!-- ********** THESIS SECTION (compact) ********** -->
+      <div class="section-heading">Thesis</div>
+      <div class="thesis-compact">
+          <div class="badge-line">
+              <span class="badge"><i class="fas fa-graduation-cap"></i> Master's Thesis</span>
+              <span class="badge"><i class="fas fa-university"></i> University of Genova</span>
+          </div>
+          <div class="title">Edge Computing in Healthcare Using Machine Learning:<br> A Systematic Literature Review</div>
+          <div class="meta">
+              <span class="author"><i class="fas fa-user-circle" style="color:#2563eb; margin-right:0.2rem;"></i>Amir Mashmool</span>
+              <span class="date"><i class="far fa-calendar-alt"></i> 2024-07-30</span>
+              <a href="https://unire.unige.it/handle/123456789/9169" class="pdf-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> PDF
+              </a>
+          </div>
+          <div class="small-note">
+              <i class="fas fa-quote-right" style="font-size:0.7rem;"></i> also published in <em>WIREs Data Mining & Knowledge Discovery</em> 16(1) (2026), e70069
+          </div>
+      </div>
+      
+      <p align="right"><a href="javascript:;" onclick="topFunction()" id="myBtn" title="Go to top">Top</a></p>
+    </div> <!-- close section -->
+  </div> <!-- close content -->
+</body>
 </html>
-
-
-
-
-
