@@ -1,0 +1,169 @@
+<html> 
+
+<head> 
+<title> 
+Amir Mashmool
+</title> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Amir Mashmool </title>
+ <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css"></style>
+
+<script language="javascript">
+  function toggleDiv(divid)
+  {
+  
+    varon = divid + 'on';
+  varoff = divid + 'off';
+
+  if(document.getElementById(varon).style.display == 'block')
+  {
+  document.getElementById(varon).style.display = 'none';
+  document.getElementById(varoff).style.display = 'block';
+  }
+  
+  else
+  { 
+  document.getElementById(varoff).style.display = 'none';
+  document.getElementById(varon).style.display = 'block'
+  }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+<style>
+    .project {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .project img {
+      width: 150px; /* Adjust according to your image size */
+      margin-right: 16px;
+    }
+
+    .project-info {
+      flex-grow: 1;
+    }
+
+    .project-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      font-size: 16px;
+    }
+  </style>
+  
+</head> 
+ 
+<body style="   padding: 3px;    margin: 0px;">
+
+
+  <div id="header"></div>
+
+ <div id="site_menu_first">
+  <img id="logo" src="Images/d2.png" alt="logo">
+</div>
+
+  
+  
+<div id="site_menu">
+  <ul>
+    <li><a  href="index.html">Home</a></li>
+    <li>|</li>
+    <li><a href="Bio.html">Bio</a></li>
+    <li>|</li>
+    <li><a href="research.html">Research</a></li>
+    <li>|</li>
+    <li><a href="Teaching.html">Teaching</a></li>
+    <li>|</li>
+    <li><a href="publications.html">Publications</a></li>
+    <li>|</li>
+    <li><a href="collaborations.html">Collaborations</a></li>
+    <li>|</li>
+    <li><a href="activities.html">Service</a></li>
+    <li>|</li>
+    <li><a id="selected_menu"  href="projects.html">Projects</a></li>
+    <li>|</li>
+   <li><a href="Gallery.html">Gallery</a></li>
+    <li>|</li>
+    <li><a href="Misc.html">Misc.</a></li>
+    <li>|</li>
+    <li><a href="Note.html">Note</a></li>
+<li>|</li>
+ <li><a href="Contact.html">Contact</a></li>
+
+
+    
+  
+    <li class="theme-toggle-item"><button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button></li>
+</ul>
+</div>
+
+<div id="content">
+<div class="section">
+  
+  <div class="project">
+    <img src="Images/dataviz.jpg" alt="Project 1">
+    <div class="project-info">
+      <h2><a href="https://dataviz-group3.github.io"> Data Visualization</a></h2>
+      <p>This is a project for visualizing different aspects of the Trento tree dataset. The website aims to provide readable and appealing visualizations for the reader.</p>
+    </div>
+  </div>
+  
+  <div class="project">
+    <img src="Images/smartg.png" alt="Project 2">
+    <div class="project-info">
+  <h2><a href="https://github.com/amirmashmool/IOT-Project-Smart-Garden/tree/main/smart-garden"> IOT-Project-Smart-Garden</a></h2>
+    <p>A smart garden project represents the marriage of technology and horticulture, offering a modern solution to age-old gardening challenges. By harnessing the power of sensors, automation, and data analysis, smart gardens empower gardeners to cultivate healthier plants with greater efficiency and sustainability.</p> 
+    </div>
+  </div>
+  
+  <div class="project">
+    <img src="Images/dpp.jpg" alt="Project 3">
+    <div class="project-info">
+    <h2><a href="https://github.com/amirmashmool/DPP_Final_Project">Data Protection And Privacy Project</a></h2>
+      <p>Maintaining Data Privacy in Association Rule Mining "Mask Algorithm" implementation with Python</p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<script>
+function syncThemeButton(){var b=document.querySelector(".theme-toggle");if(!b)return;var d=document.body.classList.contains("dark-mode");b.textContent=d?"☀ Light":"☾ Dark";}
+function toggleThemeMode(){document.body.classList.toggle("dark-mode");localStorage.setItem("site-theme",document.body.classList.contains("dark-mode")?"dark":"light");syncThemeButton();}
+document.addEventListener("DOMContentLoaded",function(){if(localStorage.getItem("site-theme")==="dark")document.body.classList.add("dark-mode");syncThemeButton();});
+</script>
+</body> 
+ 
+</html> 

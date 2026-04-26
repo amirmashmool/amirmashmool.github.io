@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.info {
+	margin-left:20px;
+}
+
+.info .at {
+	width:15px;
+	height:15px;
+}
+
+#foto {
+	margin-bottom:20px;
+	margin-right:20px;
+	width:800px;
+	height:180px;
+
+}
+
+#logo {
+	*/
+	margin-top:10px; */
+	margin-bottom:0px;
+	margin-right:20px;
+	/*
+	width:800px;
+	height:180px;
+	float:left;
+	*/
+}
+
+.info_content {
+	/*
+	padding-top:0px;
+	font-size:18pt;
+	line-height:27pt;
+	*/
+}
+
+.top {
+	margin-left:930px;
+}
+
+.back {
+	margin-left:860px;
+}

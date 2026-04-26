@@ -1,0 +1,630 @@
+
+<html>
+
+<head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F383XWTFRC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-F383XWTFRC');
+</script>
+
+<title>Amir Mashmool | Homepage</title>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<meta name="DESCRIPTION" content="This is my personal blog, where I share about my Education, Research and my Activities.">
+<meta name="KEYWORDS" content="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+/* ---------- Top Home Layout ---------- */
+
+.home-main-layout{
+  display: grid;
+  grid-template-columns: 337px 620px;
+  gap: 90px;
+  justify-content: center;
+  align-items: start;
+  margin: 12px auto 18px auto;
+}
+
+.home-bio-text{
+  max-width: 620px;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.home-bio-text h2{
+  margin: 0 0 10px 0;
+  padding: 0;
+  border: none !important;
+  font-size: 28px;
+  color: #14324f;
+}
+
+.home-bio-text p{
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.research-list{
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+}
+
+.research-list li{
+  margin-bottom: 5px;
+}
+
+/* ---------- Photo Slider ---------- */
+
+.photo-slider{
+  width: 337px;
+  margin: 0;
+}
+
+.slides-wrap{
+  width: 337px;
+  height: 371px;
+}
+
+.photo-slider .slide{
+  width: 337px;
+  height: 371px;
+  object-fit: cover;
+  display: none;
+  border-radius: 8px;
+}
+
+.slider-controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.nav-icon{
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 32px;
+  padding: 0;
+}
+
+.nav-icon:hover{
+  background: #f3f3f3;
+}
+
+.dots{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cfcfcf;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.dot.active{
+  background: #333;
+  transform: scale(1.2);
+}
+
+/* ---------- Cards ---------- */
+
+.info_content{
+  margin-top: 6px;
+}
+
+.collaboration-card,
+.news-card,
+.opportunity-card {
+  background: #f8fafc;
+  border: 1px solid #d9e2ec;
+  border-left: 4px solid #b08d2f;
+  border-radius: 7px;
+  box-sizing: border-box;
+  padding: 4px 10px 8px 10px;
+}
+
+.collaboration-card {
+  margin: 8px 0 10px 0;
+}
+
+.collaboration-card h2,
+.news-card h2,
+.opportunity-card h2 {
+  margin: 0 0 4px 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.1;
+  color: #14324f;
+}
+
+.collaboration-card p{
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* ---------- News + Open Positions ---------- */
+
+.bottom-news-panels{
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 10px;
+  margin-top: 8px;
+  align-items: stretch;
+}
+
+.bottom-news-panels .news-card,
+.bottom-news-panels .opportunity-card{
+  margin: 0;
+  height: 320px;
+  max-height: 320px;
+}
+
+.news-card{
+  overflow-y: auto;
+}
+
+.opportunity-card{
+  overflow: hidden;
+}
+
+.news-card ul,
+.opportunity-card ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.news-card li,
+.opportunity-card li {
+  margin-bottom: 3px;
+  line-height: 1.25;
+}
+
+.panel-note {
+  color: #5f7083;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* ---------- Academic Profiles ---------- */
+
+.academic-section{
+  margin-top: 22px;
+}
+
+.academic-profiles-title{
+  display: block;
+  margin-bottom: 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+  color: #14324f;
+}
+
+.academic-profiles{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.academic-profiles a img{
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width: 900px){
+  .home-main-layout{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .photo-slider{
+    margin: 0 auto;
+  }
+
+  .home-bio-text{
+    max-width: 100%;
+  }
+
+  .bottom-news-panels{
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-news-panels .news-card,
+  .bottom-news-panels .opportunity-card{
+    height: auto;
+    max-height: none;
+  }
+
+  .news-card{
+    max-height: 180px;
+  }
+}
+
+@media(max-width: 600px){
+  .academic-profiles{
+    justify-content: center;
+  }
+}
+
+</style>
+
+<script language="javascript">
+
+function toggleDiv(divid)
+{
+  varon = divid + 'on';
+  varoff = divid + 'off';
+
+  if(document.getElementById(varon).style.display == 'block')
+  {
+    document.getElementById(varon).style.display = 'none';
+    document.getElementById(varoff).style.display = 'block';
+  }
+  else
+  {
+    document.getElementById(varoff).style.display = 'none';
+    document.getElementById(varon).style.display = 'block';
+  }
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if(document.getElementById("myBtn")){
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+let slideIndex = 1;
+
+function initDots() {
+  const slides = document.querySelectorAll("#profileSlider .slide");
+  const dotsContainer = document.getElementById("sliderDots");
+  if (!dotsContainer) return;
+
+  dotsContainer.innerHTML = "";
+  slides.forEach((_, i) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "dot";
+    b.setAttribute("aria-label", "Go to slide " + (i + 1));
+    b.onclick = () => currentSlide(i + 1);
+    dotsContainer.appendChild(b);
+  });
+}
+
+function setActiveDot() {
+  const dots = document.querySelectorAll("#sliderDots .dot");
+  dots.forEach(d => d.classList.remove("active"));
+  if (dots[slideIndex - 1]) dots[slideIndex - 1].classList.add("active");
+}
+
+function showSlides(n) {
+  const slides = document.querySelectorAll("#profileSlider .slide");
+  if (slides.length === 0) return;
+
+  if (n > slides.length) slideIndex = 1;
+  if (n < 1) slideIndex = slides.length;
+
+  slides.forEach(s => (s.style.display = "none"));
+  slides[slideIndex - 1].style.display = "block";
+
+  setActiveDot();
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  initDots();
+  showSlides(slideIndex);
+});
+
+</script>
+
+</head>
+
+<body class="home-page" style="padding: 3px; margin: 0px;">
+
+<div id="header"></div>
+
+<div id="site_menu_first">
+  <img id="logo" src="Images/d2.png" alt="logo">
+</div>
+
+<div id="site_menu">
+  <ul>
+    <li><a id="selected_menu" href="index.html">Home</a></li>
+    <li>|</li>
+    <li><a href="Bio.html">Bio</a></li>
+    <li>|</li>
+    <li><a href="research.html">Research</a></li>
+    <li>|</li>
+    <li><a href="Teaching.html">Teaching</a></li>
+    <li>|</li>
+    <li><a href="publications.html">Publications</a></li>
+    <li>|</li>
+    <li><a href="collaborations.html">Collaborations</a></li>
+    <li>|</li>
+    <li><a href="activities.html">Service</a></li>
+    <li>|</li>
+    <li><a href="projects.html">Projects</a></li>
+    <li>|</li>
+    <li><a href="Gallery.html">Gallery</a></li>
+    <li>|</li>
+    <li><a href="Misc.html">Misc.</a></li>
+    <li>|</li>
+    <li><a href="Note.html">Note</a></li>
+    <li>|</li>
+    <li><a href="Contact.html">Contact</a></li>
+
+    <li class="theme-toggle-item">
+      <button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button>
+    </li>
+  </ul>
+</div>
+
+<div id="content">
+  <div class="section">
+
+    <div class="content_title"></div>
+
+    <div class="home-main-layout">
+
+      <div class="photo-slider" id="profileSlider">
+
+        <div class="slides-wrap">
+          <img class="slide" src="Images/amir mashmool-Photoroom.jpg" alt="Photo 1">
+          <img class="slide" src="Images/Amir2.JPEG" alt="Photo 2">
+        </div>
+
+        <div class="slider-controls">
+          <button class="nav-icon" type="button" onclick="plusSlides(-1)" aria-label="Previous">‹</button>
+          <div class="dots" id="sliderDots" aria-label="Slide dots"></div>
+          <button class="nav-icon" type="button" onclick="plusSlides(1)" aria-label="Next">›</button>
+        </div>
+
+      </div>
+
+      <div class="home-bio-text">
+
+        <h2>Amir Mashmool</h2>
+
+        <p>
+          I am a Ph.D. researcher in <b>Computer Science</b> at the
+          <a href="https://www.uni-bremen.de/" target="_blank">University of Bremen</a>,
+          Germany <img src="Images/germany_flag.png">,
+          working under the supervision of Professor Rainer Koschke.
+        </p>
+
+        <p>
+          Previously, I received my B.Sc. in Computer Engineering from the
+          <a href="https://www.birjand.ac.ir/fa" target="_blank">University of Birjand</a>,
+          Iran <img src="Images/ir.png">,
+          and my M.Sc. in Computer Science from the
+          <a href="https://unige.it/en" target="_blank">University of Genova</a>,
+          Italy <img src="Images/it.png">.
+        </p>
+
+        <p>My research focuses on:</p>
+
+        <ul class="research-list">
+          <li>Software Engineering</li>
+          <li>Program Comprehension</li>
+          <li>Software Visualization</li>
+          <li>Empirical Software Engineering</li>
+          <li>Human Aspects of Software Engineering</li>
+          <li>Cloud / Edge Computing</li>
+          <li>Machine Learning</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="info_content">
+
+      <font size="-1">
+
+        <div class="collaboration-card">
+          <h2>Research Collaboration</h2>
+          <p>
+            If you are a researcher working on program comprehension, software visualization, eye tracking, cognitive aspects of software engineering, empirical software engineering, or human aspects of software engineering and are interested in my work, feel free to reach out to discuss potential collaborations. I’m always open to working on exciting software engineering research projects and creating joint publications together.  Let’s connect and create impactful research together. 📝
+          </p>
+        </div>
+
+        <div class="bottom-news-panels">
+
+          <section class="news-card">
+            <h2>News</h2>
+            <ul>
+              <li><b>Feb 2026 : Our <a href="https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.70069" target="_blank">SLR paper</a> has been accepted for publication in the WIREs Journal (IF: 11.7)</li>
+      
+            </ul>
+          </section>
+
+          <section class="opportunity-card">
+            <h2>Open Positions / Thesis Opportunities</h2>
+            <ul>
+              <li>If you are a Bachelor’s or Master’s student in Computer Science at the University of Bremen and are interested in writing your thesis in the field of Software Engineering, feel free to contact me. We can discuss your interests and work together to find a suitable and exciting thesis topic.
+  
+            </ul>
+           
+          </section>
+
+        </div>
+
+        <div class="academic-section">
+          <b class="academic-profiles-title">My Academic Profiles:</b>
+
+          <div class="academic-profiles">
+
+            <a href="https://scholar.google.com/citations?hl=en&user=h-hiNwcAAAAJ" target="_blank">
+              <img src="Images/scholar.png">
+            </a>
+
+            <a href="https://www.adscientificindex.com/scientist/amir-mashmool/5207651" target="_blank">
+              <img src="Images/ranking.jpg">
+            </a>
+
+            <a href="https://dblp.uni-trier.de/pid/274/7004.html" target="_blank">
+              <img src="Images/DBLP.png">
+            </a>
+
+            <a href="https://www.researchgate.net/profile/Amir-Mashmool" target="_blank">
+              <img src="Images/RG.png">
+            </a>
+
+            <a href="https://www.scopus.com/authid/detail.uri?authorId=57221141927" target="_blank">
+              <img src="Images/scopus.jpg">
+            </a>
+
+            <a href="https://ieeexplore.ieee.org/author/37088537333" target="_blank">
+              <img src="Images/ieeelog.png">
+            </a>
+
+            <a href="https://openreview.net/profile?id=%7EAmir_Mashmool1" target="_blank">
+              <img src="Images/op.png">
+            </a>
+
+            <a href="https://www.semanticscholar.org/author/Amir-Mashmool/1958790086" target="_blank">
+              <img src="Images/sem.png">
+            </a>
+
+            <a href="https://publons.com/researcher/3809289/amir-mashmool/" target="_blank">
+              <img src="Images/publons.png">
+            </a>
+
+            <a href="https://orcid.org/my-orcid?orcid=0000-0002-1612-3094" target="_blank">
+              <img src="Images/ID.png">
+            </a>
+
+            <a href="https://unige-it.academia.edu/Amirmashmool" target="_blank">
+              <img src="Images/academia.png">
+            </a>
+
+            <a href="https://loop.frontiersin.org/people/1124584" target="_blank">
+              <img src="Images/fron.jpg">
+            </a>
+
+            <a href="https://sciprofiles.com/profile/Amir-mashmool" target="_blank">
+              <img src="Images/sci.png">
+            </a>
+
+            <a href="https://www.mysciencework.com/profile/amir.mashmool" target="_blank">
+              <img src="Images/msw.png">
+            </a>
+
+            <a href="https://scite.ai/users/amir-mashmool-v9ar2/public" target="_blank">
+              <img src="Images/scite.png">
+            </a>
+
+            <a href="https://ieee-collabratec.ieee.org/app/p/AmirMashmool1111341" target="_blank">
+              <img src="Images/ctieee.png">
+            </a>
+
+            <a href="https://github.com/amirmashmool" target="_blank">
+              <img src="Images/git.png">
+            </a>
+
+          </div>
+        </div>
+
+        <br>
+
+        <b>Follow me on Social media:</b>
+        <br><br>
+
+        <div class="social-profiles">
+          <a href="https://www.linkedin.com/in/amir-mashmool/" draggable="false" target="_blank">
+            <img src="Images/Linkedin.png" alt="Linkedin" title="linkedin" draggable="false">
+          </a>
+
+          <a href="https://www.facebook.com/amirmashmool" draggable="false" target="_blank">
+            <img src="Images/Facebook.png" alt="facebook" title="facebook" draggable="false">
+          </a>
+
+          <a href="https://www.instagram.com/amirrgram/" draggable="false" target="_blank">
+            <img src="Images/insta.png" alt="instagram" title="instagram" draggable="false">
+          </a>
+
+          <a href="https://twitter.com/Amir_mashmool" draggable="false" target="_blank">
+            <img src="Images/twitter-icon.png" alt="twitter" title="twitter" draggable="false">
+          </a>
+        </div>
+
+      </font>
+
+    </div>
+
+    <hr>
+
+  </div>
+</div>
+
+<script>
+function syncThemeButton(){
+  var b=document.querySelector(".theme-toggle");
+  if(!b)return;
+  var d=document.body.classList.contains("dark-mode");
+  b.textContent=d?"☀ Light":"☾ Dark";
+}
+
+function toggleThemeMode(){
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem("site-theme",document.body.classList.contains("dark-mode")?"dark":"light");
+  syncThemeButton();
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+  if(localStorage.getItem("site-theme")==="dark"){
+    document.body.classList.add("dark-mode");
+  }
+  syncThemeButton();
+});
+</script>
+
+</body>
+
+</html>
+

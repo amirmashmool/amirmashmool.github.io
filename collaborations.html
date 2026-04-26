@@ -1,0 +1,672 @@
+<html> 
+
+<head> 
+<title> 
+Amir Mashmool
+</title> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Amir Mashmool </title>
+ <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+ /* Define a CSS style for the image */
+        #erdos_image {
+            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
+            max-width: 60%; /* Set the maximum width of the image to the width of its container */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+            margin-top: 10px; /* Add some top margin for spacing */
+            margin-left: auto; /* Set left margin to auto for centering */
+            margin-right: auto; /* Set right margin to auto for centering */
+ }
+
+
+
+
+
+
+
+.section-title-wrap{
+  text-align: center;
+  margin: 35px 0 18px 0;
+}
+
+.section-title-box{
+  display: inline-block;
+  padding: 8px 22px;
+  font-family: Trebuchet MS, Arial, sans-serif;
+  font-size: 16.5px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #0b2447;
+  border: 2px solid #0b2447;
+ border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff, #f6f9ff);
+  box-shadow: 0 6px 14px rgba(11,36,71,0.12);
+}
+
+
+
+
+
+  
+
+/* ===== Co-authors grid ===== */
+.coauthors-wrap{ margin-top: 10px; }
+
+.coauthors-grid{
+  display: grid;
+ grid-template-columns: repeat(10, minmax(0, 1fr));
+  row-gap: 8px;        /* فاصله بین سطرها */
+  column-gap: 6px;
+}
+
+@media (max-width: 1100px){
+  .coauthors-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 850px){
+  .coauthors-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px){
+  .coauthors-grid{ grid-template-columns: 1fr; }
+}
+
+.coauthor-card{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+  margin: 0 auto;      /* وسط‌چین داخل ستون */
+  width: 100%;  /* اندازه واقعی کارت */
+  max-width: 160px;   /* کنترل اندازه */
+
+}
+
+.coauthor-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+}
+
+/* عکس: بخش اصلی کارت */
+.coauthor-photo{
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* کاملاً مربع */
+  object-fit: cover;
+  display: block;
+  background: #eee;
+}
+
+/* بدنه */
+.coauthor-body{
+  padding: 4px 6px 8px;   /* ⬅ ارتفاع کارت بیشتر */
+  text-align: center;
+  font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+/* اسم */
+.coauthor-name{
+  font-weight: 700;
+  font-size: 13.5px;
+  color: #0b2447;
+  line-height: 1.2;
+}
+
+/* سمت / دانشگاه */
+.coauthor-role{
+  margin-top: 4px;
+  font-size: 11.8px;
+  color: rgba(0,0,0,0.7);
+  line-height: 1.25;
+
+  /* جلوگیری از کشیده شدن بیش از حد */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;     /* حداکثر 3 خط */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* لینک‌ها */
+.coauthor-links{
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+}
+
+/* دکمه */
+.coauthor-btn{
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(0,0,0,0.04);
+  color: rgba(0,0,0,0.8);
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.coauthor-btn:hover{
+  background: rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+}
+
+/* پرچم */
+.coauthor-flag{
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+</style>
+
+<script language="javascript">
+  function toggleDiv(divid)
+  {
+  
+    varon = divid + 'on';
+  varoff = divid + 'off';
+
+  if(document.getElementById(varon).style.display == 'block')
+  {
+  document.getElementById(varon).style.display = 'none';
+  document.getElementById(varoff).style.display = 'block';
+  }
+  
+  else
+  { 
+  document.getElementById(varoff).style.display = 'none';
+  document.getElementById(varon).style.display = 'block'
+  }
+}
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+} 
+</script>
+
+</head> 
+ 
+<body style="   padding: 3px;    margin: 0px;">
+
+  
+  <div id="header"></div>
+
+<div id="site_menu_first">
+  <img id="logo" src="Images/d2.png" alt="logo">
+</div>
+
+  
+  
+  
+<div id="site_menu">
+  <ul>
+    <li><a  href="index.html">Home</a></li>
+    <li>|</li>
+     <li><a href="Bio.html">Bio</a></li>
+    <li>|</li>
+    <li><a href="research.html">Research</a></li>
+    <li>|</li>
+    <li><a href="Teaching.html">Teaching</a></li>
+    <li>|</li>
+    <li><a href="publications.html">Publications</a></li>
+    <li>|</li>
+    <li><a id="selected_menu" href="collaborations.html">Collaborations</a></li>
+    <li>|</li>
+    <li><a href="activities.html">Service</a></li>
+    <li>|</li>
+    <li><a href="projects.html">Projects</a></li>
+    <li>|</li>
+  <li><a href="Gallery.html">Gallery</a></li>
+    <li>|</li>
+    <li><a href="Misc.html">Misc.</a></li>
+    <li>|</li>
+    <li><a href="Note.html">Note</a></li>
+<li>|</li>
+ <li><a href="Contact.html">Contact</a></li>
+
+
+
+    
+  </ul>
+</div>
+
+<div id="content">
+<div class="section">
+
+<font size="+0">
+<b>
+Main Co-Authors in My Publications
+</b>
+</font></strong>
+<br>
+
+<div class="section-title-wrap">
+  <span class="section-title-box">
+    Software Engineering Researchers
+  </span>
+</div>
+
+ <div class="coauthors-wrap">
+  <div class="coauthors-grid">
+    <!-- 1 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/mojtaba-shahin.jpg" alt="Dr Mojtaba Shahin">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Mojtaba Shahin</div>
+        <div class="coauthor-role">
+          Associate Professor — Software Engineering, RMIT University
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=Aml0q7sAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/peng-liang.jpg" alt="Dr Peng Liang">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Peng Liang</div>
+        <div class="coauthor-role">
+          Full Professor — Software Engineering, <br> School of Computer Science,<br> Wuhan University
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=76CoujsAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/rainer.jpg" alt="Prof Rainer Koschke">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Rainer Koschke</div>
+        <div class="coauthor-role">
+          Full Professor — Software Engineering, <br> Department of Computer Science,<br> University of Bremen
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=F02JdKUAAAAJ&hl=de" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- 3 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/valentina-lenarduzzi.jpg" alt="Dr Valentina Lenarduzzi">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Valentina Lenarduzzi</div>
+        <div class="coauthor-role">
+          Full Professor - University of Southern Denmark
+         
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=HKGXl54AAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 5-->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/taghi-javdani-gandomani.jpg" alt="Dr Taghi Javdani Gandomani">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Taghi Javdani Gandomani</div>
+        <div class="coauthor-role">
+          Associate Professor — Shahrekord University
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=D_JjdUYAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/aakash.jpg" alt="Prof Aakash Ahmad">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Aakash Ahmad</div>
+        <div class="coauthor-role">
+          Associate Professor — Software Engineering, <br> University of Derby
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=nWtJYoIAAAAJ&hl=de" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+        <!-- 5-->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/mahsa-radnejad.jpg" alt="Mahsa Radnejad">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Mahsa Radnejad</div>
+        <div class="coauthor-role">
+          PhD Candidate — University of Maryland, Baltimore County
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=fGnN2HcAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    
+        <!-- 5-->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/maedeh_dashti.jpg" alt="Maedeh Dashti">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Maedeh Dashti</div>
+        <div class="coauthor-role">
+          Researcher — Shahrekord Uinversity
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=fRtzyuIAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+        <!-- 5-->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/ali_rezaei_nasab.jpg" alt="Ali Rezaei Nasab">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Ali Rezaei Nasab</div>
+        <div class="coauthor-role">
+          Researcher — Shiraz University
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=BeVzWZUAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    
+ </div>
+</div>
+<div class="section-title-wrap">
+  <span class="section-title-box">
+    AI & Machine Learning Researchers
+  </span>
+</div>
+<div class="coauthors-wrap">
+  <div class="coauthors-grid">
+    <!-- 4 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/mohammad-ghasemi-gol.jpg" alt="Dr Mohammad Ghasemi Gol">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Mohammad Ghasemi Gol</div>
+        <div class="coauthor-role">
+          Associate Professor — Old Dominion University
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=ks_jgUkAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/hamid.png" alt="Prof Hamid Saadatfar">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Hamid Saadatfar</div>
+        <div class="coauthor-role">
+          Associate Professor, <br> University of Birjand
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=Dr3UN0gAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/giorgio.jpg" alt="Prof Giorgio Delzanno">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Giorgio Delzanno</div>
+        <div class="coauthor-role">
+          Full Professor, <br> University of Genoa
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=hVOrSewAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+    <!-- 2 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/daniele.jpg" alt="Prof Daniele D'Agostino">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Daniele D'Agostino</div>
+        <div class="coauthor-role">
+          Associate Professor, <br> University of Genoa
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=jB37jcIAAAAJ&hl=de" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+   <!-- 6 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/acharya.jpg" alt="Prof Rajendra Acharya">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Rajendra Acharya</div>
+        <div class="coauthor-role">
+          Full Professor — University of Southern Queensland, Australia
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=8FjY99sAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+   <!-- 6 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/Anthony.jpg" alt="Prof Anthony Theodore Chronopoulos">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Prof Anthony Theodore Chronopoulos</div>
+        <div class="coauthor-role">
+          Full Professor — The University of Texas at San Antonio
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=vpaOim8AAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+    
+    <!-- 6 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/roohallah-alizadehsani.jpg" alt="Dr Roohallah Alizadehsani">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Dr Roohallah Alizadehsani</div>
+        <div class="coauthor-role">
+          Research Fellow — IISRI, Deakin University, Australia
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=SZxPHPAAAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 9 -->
+    <div class="coauthor-card">
+      <img class="coauthor-photo" src="Images/coauthors/javad-hassannataj-joloudari.jpg" alt="Mr Javad Hassannataj Joloudari">
+      <div class="coauthor-body">
+        <div class="coauthor-name">Mr Javad Hassannataj Joloudari</div>
+        <div class="coauthor-role">
+          Researcher — Artificial Intelligence,<br>
+          University of Birjand
+        </div>
+        <div class="coauthor-links">
+          <a class="coauthor-btn" href="https://scholar.google.com/citations?user=-_1_pF0AAAAJ&hl=en" target="_blank">
+            Google Scholar
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<br>
+  <br>
+  <br>
+
+  
+<font size="+0">
+<b>
+Erdős number
+</b>
+</font></strong>
+<be>
+<p align="justify">
+<b>Have you ever heard of the Erdos number? </b> <br>
+It's a fun way to measure the collaboration and connection between mathematicians. The idea is simple: if you've written a paper with someone who has an Erdos number of 1, then your Erdos number is 2. 
+If you've written a paper with someone who has an Erdos number of 2, your Erdos number is 3, and so on.
+</p>
+<br>
+ <img id="erdos_image" src="Images/erdos.jpg">
+<br>
+<br>
+
+<font size="+0">
+<b>
+My Erdős number
+</b>
+
+  <br>
+ <img id="erdos_image" src="Images/erdos Amir.jpg">
+<br>
+</font></strong>
+<be>
+<p align="justify">
+<b>I'm excited to share that my Erdos number is 4 😍 </b> <span>Check from this</span> <a href="https://www.csauthors.net/distance/amir-mashmool/paul-erdos" target="_blank"> Link </a>. <br>
+It's not the smallest Erdos number out there, but it's still pretty cool to know that I'm just 4 degrees of separation away from one of the greatest mathematicians of the 20th century. For those who don't know, Paul Erdos was a prolific mathematician who wrote more than 1,500 papers and collaborated with hundreds of other mathematicians during his lifetime.
+<br><br> Being connected to such an influential mathematician is a great honor, and it makes me proud of all the collaborations I've had so far in my own career. Whether it's in research, academia, or industry, I believe that working together is the best way to achieve great things. So let's keep collaborating and pursuing our passions, and who knows - maybe one day we'll all have an Erdos number to brag about.
+</p>
+<br>
+
+  
+</div> 
+</div> 
+</body> 
+ 
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

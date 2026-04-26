@@ -1,0 +1,133 @@
+<html> 
+
+<head> 
+<title> 
+Amir Mashmool
+</title> 
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Amir Mashmool </title>
+ <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<link href="common.css" rel="stylesheet" type="text/css">
+<link href="index.css" rel="stylesheet" type="text/css">
+<style type="text/css"></style>
+
+<style>
+/* استایل گالری پوشه‌ها */
+.folder-list {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+
+.folder { 
+  text-align:center; 
+  border:1px solid #ccc; 
+  padding:10px; 
+  border-radius:8px; 
+  transition:transform 0.2s; 
+  cursor:pointer; 
+}
+
+.folder:hover { transform:scale(1.05); box-shadow:0 4px 10px rgba(0,0,0,0.2); }
+
+.folder img { 
+  width:100%; 
+  height:150px; 
+  object-fit:cover; 
+  border-radius:6px; 
+}
+
+.folder p { margin-top:8px; font-weight:bold; }
+</style>
+</head> 
+
+<body style="padding: 3px; margin: 0px;">
+
+
+  <!-- هدر و منوی اصلی بدون تغییر -->
+  <div id="header"></div>
+
+  <div id="site_menu_first">
+  <img id="logo" src="Images/d2.png" alt="logo">
+</div>
+
+  <div id="site_menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>|</li>
+      <li><a href="Bio.html">Bio</a></li>
+      <li>|</li>
+      <li><a href="research.html">Research</a></li>
+      <li>|</li>
+      <li><a href="Teaching.html">Teaching</a></li>
+      <li>|</li>
+      <li><a href="publications.html">Publications</a></li>
+      <li>|</li>
+      <li><a href="collaborations.html">Collaborations</a></li>
+      <li>|</li>
+      <li><a href="activities.html">Service</a></li>
+      <li>|</li>
+      <li><a href="projects.html">Projects</a></li>
+      <li>|</li>
+      <li><a id="selected_menu" href="gallery.html">Gallery</a></li>
+      <li>|</li>
+      <li><a href="Misc.html">Misc.</a></li>
+      <li>|</li>
+      <li><a href="Note.html">Note</a></li>
+      <li>|</li>
+      <li><a href="Contact.html">Contact</a></li>
+    
+    <li class="theme-toggle-item"><button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button></li>
+</ul>
+  </div>
+
+  <!-- بخش محتوا: گالری پوشه‌ها -->
+  <div id="content">
+    <div class="section">
+      <h2>Photo Gallery</h2>
+
+      <div class="folder-list">
+
+ <div class="folder" onclick="location.href='Gallery/iran/index.html'">
+          <img src="Gallery/iran/iran.jpg" alt="My Beautiful Country iran">
+          <p>My Beautiful Country iran (5 photos)</p>
+        </div>
+        
+        <div class="folder" onclick="location.href='Gallery/University_Bremen/index.html'">
+          <img src="Gallery/University_Bremen/examday.jpg" alt="University of Bremen">
+          <p>University of Bremen (5 photos)</p>
+        </div>
+
+        <div class="folder" onclick="location.href='Gallery/University_Genova/index.html'">
+          <img src="Gallery/University_Genova/m1.JPG" alt="University of Genova">
+          <p>University of Genova (6 photos)</p>
+        </div>
+
+        <div class="folder" onclick="location.href='Gallery/University_Birjand/index.html'">
+          <img src="Gallery/University_Birjand/acm1.jpg" alt="University of Birjand">
+          <p>University of Birjand (6 photos)</p>
+        </div>
+
+        <div class="folder" onclick="location.href='Gallery/Schools/Imam_Hussein/index.html'">
+          <img src="Gallery/Schools/Imam_Hussein/high school1.jpg" alt="Imam Hussein High School">
+          <p>Imam Hussein High School (3 photos)</p>
+        </div>
+
+        <div class="folder" onclick="location.href='Gallery/Schools/Hazrat_Mahdi/index.html'">
+          <img src="Gallery/Schools/Hazrat_Mahdi/mid school1.JPG" alt="Hazrat Mahdi Middle School">
+          <p>Hazrat Mahdi Middle School (1 photo)</p>
+        </div>
+
+        <div class="folder" onclick="location.href='Gallery/Childhood/index.html'">
+          <img src="Gallery/Childhood/chilhood1.JPG" alt="Childhood">
+          <p>Childhood (1 photo)</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
