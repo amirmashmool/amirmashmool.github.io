@@ -37,10 +37,8 @@
 	*/
 }
 
-.top {
-	margin-left:930px;
-}
-
+.top,
 .back {
-	margin-left:860px;
+  margin-left: 0;
+  text-align: right;
 }
