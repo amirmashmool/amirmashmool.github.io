@@ -1,96 +1,198 @@
-<html> 
+<html>
 
-<head> 
-<title> 
-Amir Mashmool
-</title> 
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>Amir Mashmool </title>
- <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
-  <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+<head>
+<title>Amir Mashmool</title>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
+<META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
+
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="index.css" rel="stylesheet" type="text/css">
-<style type="text/css">
- .infront {
-      display: flex;
-    }
 
-    .infrontt {
-      flex: 1;
-      margin-right: 20px; /* Adjust the margin as needed */
-    }
+<style type="text/css">
+.infront {
+  display: flex;
+}
+
+.infrontt {
+  flex: 1;
+  margin-right: 20px;
+}
+
 #wordcloud {
-            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
-            max-width: 80%; /* Set the maximum width of the image to the width of its container */
-            height: auto; /* Automatically adjust the height to maintain aspect ratio */
-            margin-top: 5px; /* Add some top margin for spacing */
-            margin-left: auto; /* Set left margin to auto for centering */
-            margin-right: auto; /* Set right margin to auto for centering */
- }
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Meeting Request Section */
+.meeting-box {
+  max-width: 720px;
+  margin-top: 15px;
+  padding: 22px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
+
+.meeting-box p {
+  margin-top: 0;
+}
+
+.meeting-box label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.meeting-box input,
+.meeting-box textarea {
+  width: 100%;
+  padding: 9px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-family: inherit;
+}
+
+.meeting-box textarea {
+  resize: vertical;
+}
+
+.meeting-box button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  cursor: pointer;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.meeting-box button:hover {
+  background-color: #555;
+}
+
+.small-note {
+  font-size: 90%;
+  color: #555;
+  margin-top: 10px;
+}
+
+.success-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #a5d6a7;
+}
+
+.error-message {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #b71c1c;
+  border: 1px solid #ef9a9a;
+}
+
+.hidden-field {
+  display: none;
+}
+
+/* Dark mode support */
+.dark-mode .meeting-box {
+  background: #1f1f1f;
+  border-color: #555;
+  color: #eee;
+}
+
+.dark-mode .meeting-box input,
+.dark-mode .meeting-box textarea {
+  background: #2b2b2b;
+  color: #eee;
+  border-color: #666;
+}
+
+.dark-mode .small-note {
+  color: #ccc;
+}
+
+.dark-mode .success-message {
+  background: #12351b;
+  color: #d7ffd9;
+  border-color: #2e7d32;
+}
+
+.dark-mode .error-message {
+  background: #3a1111;
+  color: #ffd7d7;
+  border-color: #8a2b2b;
+}
 </style>
 
 <script language="javascript">
-  function toggleDiv(divid)
-  {
-  
-    varon = divid + 'on';
-  varoff = divid + 'off';
+function toggleDiv(divid) {
+  var varon = divid + 'on';
+  var varoff = divid + 'off';
 
-  if(document.getElementById(varon).style.display == 'block')
-  {
-  document.getElementById(varon).style.display = 'none';
-  document.getElementById(varoff).style.display = 'block';
-  }
-  
-  else
-  { 
-  document.getElementById(varoff).style.display = 'none';
-  document.getElementById(varon).style.display = 'block'
+  if (document.getElementById(varon).style.display == 'block') {
+    document.getElementById(varon).style.display = 'none';
+    document.getElementById(varoff).style.display = 'block';
+  } else {
+    document.getElementById(varoff).style.display = 'none';
+    document.getElementById(varon).style.display = 'block';
   }
 }
 
-
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.getElementById("myBtn")) {
+      document.getElementById("myBtn").style.display = "block";
     }
+  } else {
+    if (document.getElementById("myBtn")) {
+      document.getElementById("myBtn").style.display = "none";
+    }
+  }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-} 
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 </script>
 
-</head> 
- 
-<body style="   padding: 3px;    margin: 0px;">
+</head>
 
+<body style="padding: 3px; margin: 0px;">
 
+<div id="header"></div>
 
-  <div id="header"></div>
-
- <div id="site_menu_first">
+<div id="site_menu_first">
   <img id="logo" src="Images/d2.png" alt="logo">
 </div>
 
-
-
 <div id="site_menu">
   <ul>
-    <li><a  href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a></li>
     <li>|</li>
     <li><a href="Bio.html">Bio</a></li>
     <li>|</li>
     <li><a href="research.html">Research</a></li>
     <li>|</li>
-      <li><a href="Teaching.html">Teaching</a></li>
+    <li><a href="Teaching.html">Teaching</a></li>
     <li>|</li>
     <li><a href="publications.html">Publications</a></li>
     <li>|</li>
@@ -100,61 +202,150 @@ function topFunction() {
     <li>|</li>
     <li><a href="projects.html">Projects</a></li>
     <li>|</li>
-<li><a href="Gallery.html">Gallery</a></li>
+    <li><a href="Gallery.html">Gallery</a></li>
     <li>|</li>
     <li><a href="Misc.html">Misc.</a></li>
     <li>|</li>
     <li><a href="Note.html">Note</a></li>
-<li>|</li>
+    <li>|</li>
     <li><a id="selected_menu" href="Contact.html">Contact</a></li>
-
-
-    
-  
-    <li class="theme-toggle-item"><button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button></li>
-</ul>
+    <li class="theme-toggle-item">
+      <button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button>
+    </li>
+  </ul>
 </div>
 
 <div id="content">
 <div class="section">
 
+<h2><font size="+1">Phone Number</font></h2>
+<ul>
+  <li>Office Tel: +49 (421) 218-99134</li>
+</ul>
 
-  <h2>
-  </strong><font size="+1">
-  Phone Number
-  </font></h2>
-  <p align="justify">
-  
-    <li>Office Tel: +49 (421) 218-99134</li>
+<h2><br><font size="+1">Email Address</font></h2>
+<ul>
+  <li>Academic Email (University of Bremen): x@y (x=mashmool.amir, y=uni-bremen.de)</li>
+  <li>Gmail: x@y (x=mashmol.amir, y=gmail.com)</li>
+</ul>
 
- <h2>
-   <br>
-  </strong><font size="+1">
-  Email Address
-  </font></h2>
-  <p align="justify">
-   <li>Academic Email (University of Bremen): x@y (x=mashmool.amir, y=uni-bremen.de)
-     <li>Gmail: x@y (x=Mashmol.amir, y=gmail.com)</li>
-    
-     <h2>
-         <br>
-  </strong><font size="+1">
-  Mailing Address
-  </font></h2>
-  <p align="justify">
-  
-Software Engineering Working Group  <br>
-University of Bremen FB03 <br>
-MZH, Room 3090 (3rd floor) <br>
-Bibliotheksstraße 1 <br>
-28359 Bremen <br>
+<h2><br><font size="+1">Mailing Address</font></h2>
+<p align="justify">
+Software Engineering Working Group<br>
+University of Bremen FB03<br>
+MZH, Room 3090 (3rd floor)<br>
+Bibliotheksstraße 1<br>
+28359 Bremen<br>
+</p>
 
+<h2><br><font size="+1">Research Collaboration Meeting</font></h2>
 
+<div class="meeting-box">
+  <p>
+    If you are interested in research collaboration, joint publications, project ideas,
+    or academic discussion, you can request a meeting using the form below.
+  </p>
+
+  <p class="small-note">
+    Your request will be sent directly to me by email.
+  </p>
+
+  <hr>
+
+  <form id="meetingForm" action="https://formspree.io/f/mbdwozkw" method="POST">
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="affiliation">Affiliation</label>
+    <input type="text" id="affiliation" name="affiliation" placeholder="University / Institute / Company">
+
+    <label for="topic">Research Topic / Collaboration Idea</label>
+    <textarea id="topic" name="topic" rows="5" required placeholder="Briefly describe your research topic or collaboration idea."></textarea>
+
+    <label for="time">Preferred Meeting Time</label>
+    <input type="text" id="time" name="preferred_time" placeholder="e.g., next week, Tuesday afternoon">
+
+    <input type="hidden" name="_subject" value="Research Collaboration Meeting Request">
+
+    <!-- Anti-spam honeypot field -->
+    <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
+
+    <button type="submit">Send Meeting Request</button>
+  </form>
+
+  <div id="successMessage" class="success-message">
+    Thank you. Your meeting request has been sent successfully. <br>
+    I will get in touch with you as soon as possible.
+  </div>
+
+  <div id="errorMessage" class="error-message">
+    Sorry, something went wrong. Please try again or contact me by email.
+  </div>
+</div>
+
+</div>
+</div>
 
 <script>
-function syncThemeButton(){var b=document.querySelector(".theme-toggle");if(!b)return;var d=document.body.classList.contains("dark-mode");b.textContent=d?"☀ Light":"☾ Dark";}
-function toggleThemeMode(){document.body.classList.toggle("dark-mode");localStorage.setItem("site-theme",document.body.classList.contains("dark-mode")?"dark":"light");syncThemeButton();}
-document.addEventListener("DOMContentLoaded",function(){if(localStorage.getItem("site-theme")==="dark")document.body.classList.add("dark-mode");syncThemeButton();});
+var meetingForm = document.getElementById("meetingForm");
+var successMessage = document.getElementById("successMessage");
+var errorMessage = document.getElementById("errorMessage");
+
+meetingForm.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  var formData = new FormData(meetingForm);
+
+  fetch(meetingForm.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      "Accept": "application/json"
+    }
+  }).then(function(response) {
+    if (response.ok) {
+      meetingForm.reset();
+      successMessage.style.display = "block";
+      errorMessage.style.display = "none";
+    } else {
+      successMessage.style.display = "none";
+      errorMessage.style.display = "block";
+    }
+  }).catch(function(error) {
+    successMessage.style.display = "none";
+    errorMessage.style.display = "block";
+  });
+});
 </script>
+
+<script>
+function syncThemeButton() {
+  var b = document.querySelector(".theme-toggle");
+  if (!b) return;
+  var d = document.body.classList.contains("dark-mode");
+  b.textContent = d ? "☀ Light" : "☾ Dark";
+}
+
+function toggleThemeMode() {
+  document.body.classList.toggle("dark-mode");
+  localStorage.setItem(
+    "site-theme",
+    document.body.classList.contains("dark-mode") ? "dark" : "light"
+  );
+  syncThemeButton();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (localStorage.getItem("site-theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+  syncThemeButton();
+});
+</script>
+
 </body>
 </html>
