@@ -28,19 +28,62 @@
   margin-right: auto;
 }
 
-/* Meeting Request Section */
+/* Contact Cards */
+.contact-cards {
+  display: flex;
+  gap: 18px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px;
+  border: 1px solid #d7e3f3;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f8fbff, #eef5ff);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+.contact-icon {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1f4e79;
+}
+
+.contact-card p {
+  margin-bottom: 0;
+  line-height: 1.55;
+}
+
+/* Meeting Section */
+.meeting-title {
+ 
+  margin-top: 35px;
+}
+
 .meeting-box {
   max-width: 720px;
+  margin: 0 auto;
   margin-top: 15px;
   padding: 22px;
   border: 1px solid #ccc;
   border-radius: 12px;
   background: #f9f9f9;
   line-height: 1.6;
-}
-
-.meeting-box p {
-  margin-top: 0;
 }
 
 .meeting-box label {
@@ -57,17 +100,11 @@
   box-sizing: border-box;
   border-radius: 6px;
   border: 1px solid #bbb;
-  font-family: inherit;
-}
-
-.meeting-box textarea {
-  resize: vertical;
 }
 
 .meeting-box button {
   margin-top: 15px;
   padding: 10px 18px;
-  cursor: pointer;
   border: none;
   background-color: #333;
   color: white;
@@ -109,7 +146,17 @@
   display: none;
 }
 
-/* Dark mode support */
+/* Dark mode */
+.dark-mode .contact-card {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  border-color: #374151;
+  color: #eee;
+}
+
+.dark-mode .contact-card h3 {
+  color: #93c5fd;
+}
+
 .dark-mode .meeting-box {
   background: #1f1f1f;
   border-color: #555;
@@ -139,40 +186,6 @@
   border-color: #8a2b2b;
 }
 </style>
-
-<script language="javascript">
-function toggleDiv(divid) {
-  var varon = divid + 'on';
-  var varoff = divid + 'off';
-
-  if (document.getElementById(varon).style.display == 'block') {
-    document.getElementById(varon).style.display = 'none';
-    document.getElementById(varoff).style.display = 'block';
-  } else {
-    document.getElementById(varoff).style.display = 'none';
-    document.getElementById(varon).style.display = 'block';
-  }
-}
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    if (document.getElementById("myBtn")) {
-      document.getElementById("myBtn").style.display = "block";
-    }
-  } else {
-    if (document.getElementById("myBtn")) {
-      document.getElementById("myBtn").style.display = "none";
-    }
-  }
-}
-
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 
 </head>
 
@@ -210,7 +223,7 @@ function topFunction() {
     <li>|</li>
     <li><a id="selected_menu" href="Contact.html">Contact</a></li>
     <li class="theme-toggle-item">
-      <button class="theme-toggle" type="button" onclick="toggleThemeMode()" aria-label="Toggle dark mode">☾ Dark</button>
+      <button class="theme-toggle" type="button" onclick="toggleThemeMode()">☾ Dark</button>
     </li>
   </ul>
 </div>
@@ -218,29 +231,45 @@ function topFunction() {
 <div id="content">
 <div class="section">
 
-<h2><font size="+1">Phone Number</font></h2>
-<ul>
-  <li>Office Tel: +49 (421) 218-99134</li>
-</ul>
+<!-- Contact Cards -->
+<div class="contact-cards">
 
-<h2><br><font size="+1">Email Address</font></h2>
-<ul>
-  <li>Academic Email (University of Bremen): x@y (x=mashmool.amir, y=uni-bremen.de)</li>
-  <li>Gmail: x@y (x=mashmol.amir, y=gmail.com)</li>
-</ul>
+  <div class="contact-card">
+    <div class="contact-icon">☎</div>
+    <h3>Phone</h3>
+    <p>Office Tel:<br><strong>+49 (421) 218-99134</strong></p>
+  </div>
 
-<h2><br><font size="+1">Mailing Address</font></h2>
-<p align="justify">
-Software Engineering Working Group<br>
-University of Bremen FB03<br>
-MZH, Room 3090 (3rd floor)<br>
-Bibliotheksstraße 1<br>
-28359 Bremen<br>
-</p>
+  <div class="contact-card">
+    <div class="contact-icon">✉</div>
+    <h3>Email</h3>
+    <p>
+      Academic Email:<br>
+      x@y (x=mashmool.amir, y=uni-bremen.de)<br><br>
+      Gmail:<br>
+      x@y (x=mashmol.amir, y=gmail.com)
+    </p>
+  </div>
 
-<h2><br><font size="+1">Research Collaboration Meeting</font></h2>
+  <div class="contact-card">
+    <div class="contact-icon">📍</div>
+    <h3>Address</h3>
+    <p>
+      Software Engineering Working Group<br>
+      University of Bremen FB03<br>
+      MZH, Room 3090<br>
+      Bibliotheksstraße 1<br>
+      28359 Bremen
+    </p>
+  </div>
+
+</div>
+
+<!-- Meeting -->
+<h2 class="meeting-title"><font size="+1">Research Collaboration Meeting</font></h2>
 
 <div class="meeting-box">
+
   <p>
     If you are interested in research collaboration, joint publications, project ideas,
     or academic discussion, you can request a meeting using the form below.
@@ -254,37 +283,37 @@ Bibliotheksstraße 1<br>
 
   <form id="meetingForm" action="https://formspree.io/f/mbdwozkw" method="POST">
 
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+    <label>Your Name</label>
+    <input type="text" name="name" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
+    <label>Your Email</label>
+    <input type="email" name="email" required>
 
-    <label for="affiliation">Affiliation</label>
-    <input type="text" id="affiliation" name="affiliation" placeholder="University / Institute / Company">
+    <label>Affiliation</label>
+    <input type="text" name="affiliation">
 
-    <label for="topic">Research Topic / Collaboration Idea</label>
-    <textarea id="topic" name="topic" rows="5" required placeholder="Briefly describe your research topic or collaboration idea."></textarea>
+    <label>Research Topic</label>
+    <textarea name="topic" required></textarea>
 
-    <label for="time">Preferred Meeting Time</label>
-    <input type="text" id="time" name="preferred_time" placeholder="e.g., next week, Tuesday afternoon">
+    <label>Preferred Time</label>
+    <input type="text" name="time">
 
     <input type="hidden" name="_subject" value="Research Collaboration Meeting Request">
-
-    <!-- Anti-spam honeypot field -->
-    <input type="text" name="_gotcha" class="hidden-field" tabindex="-1" autocomplete="off">
+    <input type="text" name="_gotcha" class="hidden-field">
 
     <button type="submit">Send Meeting Request</button>
+
   </form>
 
   <div id="successMessage" class="success-message">
-    Thank you. Your meeting request has been sent successfully. <br>
+    Thank you.<br>
     I will get in touch with you as soon as possible.
   </div>
 
   <div id="errorMessage" class="error-message">
-    Sorry, something went wrong. Please try again or contact me by email.
+    Sorry, something went wrong. Please try again.
   </div>
+
 </div>
 
 </div>
@@ -303,9 +332,7 @@ meetingForm.addEventListener("submit", function(e) {
   fetch(meetingForm.action, {
     method: "POST",
     body: formData,
-    headers: {
-      "Accept": "application/json"
-    }
+    headers: { "Accept": "application/json" }
   }).then(function(response) {
     if (response.ok) {
       meetingForm.reset();
@@ -315,7 +342,7 @@ meetingForm.addEventListener("submit", function(e) {
       successMessage.style.display = "none";
       errorMessage.style.display = "block";
     }
-  }).catch(function(error) {
+  }).catch(function() {
     successMessage.style.display = "none";
     errorMessage.style.display = "block";
   });
@@ -332,8 +359,7 @@ function syncThemeButton() {
 
 function toggleThemeMode() {
   document.body.classList.toggle("dark-mode");
-  localStorage.setItem(
-    "site-theme",
+  localStorage.setItem("site-theme",
     document.body.classList.contains("dark-mode") ? "dark" : "light"
   );
   syncThemeButton();
