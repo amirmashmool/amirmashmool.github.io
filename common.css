@@ -728,7 +728,7 @@ body.home-page .opportunity-card li:last-child {
 }
 
 /* ===============================
-   FINAL RESPONSIVE FIX FOR MOBILE + DESKTOP MENU WIDTH
+   FINAL RESPONSIVE FIX FOR MOBILE + COMPACT MENU SPACING
    =============================== */
 
 html {
@@ -761,7 +761,7 @@ img {
   padding-right: 16px !important;
 }
 
-/* دسکتاپ: container بازتر شود تا منو راحت‌تر در یک خط جا شود */
+/* دسکتاپ */
 @media (min-width: 901px) {
   #site_menu_first,
   #site_menu,
@@ -769,33 +769,36 @@ img {
   #footer {
     max-width: 1280px !important;
   }
-
-  #site_menu ul {
-    flex-wrap: nowrap !important;
-    white-space: nowrap !important;
-    justify-content: center !important;
-  }
 }
 
 #site_menu {
   height: auto !important;
 }
 
+/* منو: فاصله‌ها کمتر شده */
 #site_menu ul {
   display: flex !important;
-  flex-wrap: nowrap !important;
+  flex-wrap: wrap !important;
   justify-content: center !important;
+  align-items: center !important;
   overflow: visible !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+
+  gap: 2px !important;
+  padding: 8px 6px !important;
 }
-@media (max-width: 900px) {
-  #site_menu ul {
-    flex-wrap: wrap !important;
-    white-space: normal !important;
-  }
-}
+
 #site_menu ul li {
   float: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#site_menu ul li a,
+.theme-toggle {
+  padding-left: 6px !important;
+  padding-right: 6px !important;
+  font-size: 12px !important;
 }
 
 body.home-page .home-main-layout {
@@ -828,6 +831,7 @@ body.home-page .bottom-news-panels {
 }
 
 @media (max-width: 900px) {
+
   #content {
     padding: 22px 16px 30px !important;
   }
@@ -853,6 +857,7 @@ body.home-page .bottom-news-panels {
 }
 
 @media (max-width: 480px) {
+
   #site_menu_first,
   #site_menu,
   #content,
@@ -861,11 +866,17 @@ body.home-page .bottom-news-panels {
     padding-right: 10px !important;
   }
 
+  #site_menu ul {
+    gap: 2px !important;
+    padding: 7px 4px !important;
+  }
+
   #site_menu ul li a,
   .theme-toggle {
-    font-size: 12px !important;
+    font-size: 11.5px !important;
     min-height: 32px !important;
-    padding: 0 8px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
   }
 
   body.home-page .home-bio-text h2 {
