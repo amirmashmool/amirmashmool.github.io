@@ -786,7 +786,7 @@ img {
   flex-wrap: nowrap !important;
   justify-content: center !important;
   overflow: visible !important;
-  white-space: normal !important;
+  white-space: nowrap !important;
 }
 @media (max-width: 900px) {
   #site_menu ul {
