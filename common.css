@@ -783,12 +783,17 @@ img {
 
 #site_menu ul {
   display: flex !important;
-  flex-wrap: wrap !important;
+  flex-wrap: nowrap !important;
   justify-content: center !important;
   overflow: visible !important;
   white-space: normal !important;
 }
-
+@media (max-width: 900px) {
+  #site_menu ul {
+    flex-wrap: wrap !important;
+    white-space: normal !important;
+  }
+}
 #site_menu ul li {
   float: none !important;
 }
