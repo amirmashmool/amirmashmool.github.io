@@ -404,7 +404,7 @@ body.dark-mode #site_menu_first,body.dark-mode #site_menu,body.dark-mode #conten
 #site_menu_first,
 #content,
 #footer {
-    max-width: 1280px !important;
+    max-width: 1200px !important;
 }
 
 #site_menu {
