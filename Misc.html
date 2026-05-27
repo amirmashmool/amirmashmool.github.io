@@ -61,6 +61,119 @@ function topFunction() {
 } 
 </script>
 
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Supervision</title>
+
+  <style>
+
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+      color:#222;
+      margin:0;
+      padding:0;
+    }
+
+    .container{
+      width:80%;
+      max-width:1100px;
+      margin:auto;
+      padding:60px 0;
+    }
+
+    h1{
+      font-size:42px;
+      margin-bottom:60px;
+      color:#111;
+    }
+
+    .student{
+      display:flex;
+      align-items:flex-start;
+      gap:35px;
+      margin-bottom:55px;
+    }
+
+    .student img{
+      width:190px;
+      height:190px;
+      object-fit:cover;
+      border-radius:14px;
+    }
+
+    .student-content{
+      flex:1;
+      padding-top:5px;
+    }
+
+    .student-top{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .student-name{
+      font-size:30px;
+      font-weight:bold;
+      color:#4f46e5;
+    }
+
+    .student-position{
+      background:#6366f1;
+      color:white;
+      padding:4px 10px;
+      border-radius:8px;
+      font-size:13px;
+      font-weight:600;
+    }
+
+    .student-description{
+      font-size:20px;
+      line-height:1.8;
+      margin-bottom:15px;
+      color:#333;
+    }
+
+    .student-links a{
+      text-decoration:none;
+      margin-right:18px;
+      color:#4f46e5;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .student-links a:hover{
+      color:#111;
+    }
+
+    @media(max-width:850px){
+
+      .student{
+        flex-direction:column;
+      }
+
+      .student img{
+        width:100%;
+        height:auto;
+      }
+
+      h1{
+        font-size:34px;
+      }
+
+      .student-name{
+        font-size:25px;
+      }
+
+    }
+
+  </style>
+
 </head> 
  
 <body style="   padding: 3px;    margin: 0px;">
@@ -120,7 +233,101 @@ List of Software Engineering Conferences
 <br>
 <ul>
 
-<li> <a href="./Images/listSECONF.pdf" target="_blank"> Download PDF File</a> </li>
+<div class="container">
+
+    <h1>Student Supervision</h1>
+
+
+    <!-- STUDENT 1 -->
+
+    <div class="student">
+
+      <img 
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" 
+        alt="student"
+      >
+
+      <div class="student-content">
+
+        <div class="student-top">
+
+          <div class="student-name">
+            John Doe
+          </div>
+
+          <div class="student-position">
+            Research Assistant (Minijob)
+          </div>
+
+        </div>
+
+        <div class="student-description">
+          John is working on machine learning systems,
+          efficient AI accelerators, and distributed training.
+        </div>
+
+        <div class="student-links">
+
+          <a href="#">Google Scholar</a>
+
+          <a href="#">LinkedIn</a>
+
+          <a href="#">GitHub</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- STUDENT 2 -->
+
+    <div class="student">
+
+      <img 
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" 
+        alt="student"
+      >
+
+      <div class="student-content">
+
+        <div class="student-top">
+
+          <div class="student-name">
+            Jane Smith
+          </div>
+
+          <div class="student-position">
+            MSc Student
+          </div>
+
+        </div>
+
+        <div class="student-description">
+          Jane works on robust machine learning,
+          computer vision, and multimodal AI systems.
+        </div>
+
+        <div class="student-links">
+
+          <a href="#">Google Scholar</a>
+
+          <a href="#">LinkedIn</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  
+
 
      
             
