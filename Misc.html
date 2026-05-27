@@ -78,14 +78,14 @@ function topFunction() {
     }
 
     .container{
-      width:80%;
-      max-width:1100px;
+      width:75%;
+      max-width:950px;
       margin:auto;
-      padding:60px 0;
+      padding:40px 0;
     }
 
     h1{
-      font-size:42px;
+      font-size:34px;
       margin-bottom:60px;
       color:#111;
     }
@@ -93,32 +93,49 @@ function topFunction() {
     .student{
       display:flex;
       align-items:flex-start;
-      gap:35px;
-      margin-bottom:55px;
+      gap:18px;
+      margin-bottom:35px;
+      transform:translateX(-28px);
     }
 
     .student img{
-      width:190px;
-      height:190px;
+      width:135px;
+      height:135px;
       object-fit:cover;
       border-radius:14px;
     }
 
     .student-content{
       flex:1;
-      padding-top:5px;
+      padding-top:0;
+      transform:translateX(-6px);
+    }
+
+    .page-intro{
+      font-size:15px;
+      line-height:1.6;
+      margin:14px 0 28px;
+      color:#333;
+      max-width:850px;
+    }
+
+    .student-section-title{
+      font-size:22px;
+      font-weight:bold;
+      color:#111;
+      margin:0 0 28px;
     }
 
     .student-top{
       display:flex;
-      align-items:center;
-      gap:12px;
+      align-items:baseline;
+      gap:10px;
       flex-wrap:wrap;
-      margin-bottom:14px;
+      margin-bottom:10px;
     }
 
     .student-name{
-      font-size:30px;
+      font-size:23px;
       font-weight:bold;
       color:#4f46e5;
     }
@@ -126,22 +143,28 @@ function topFunction() {
     .student-position{
       background:#6366f1;
       color:white;
-      padding:4px 10px;
-      border-radius:8px;
-      font-size:13px;
+      padding:3px 8px;
+      border-radius:6px;
+      font-size:11px;
       font-weight:600;
     }
 
+    .student-duration{
+      font-size:12px;
+      font-weight:600;
+      color:#555;
+    }
+
     .student-description{
-      font-size:20px;
-      line-height:1.8;
-      margin-bottom:15px;
+      font-size:15px;
+      line-height:1.55;
+      margin-bottom:10px;
       color:#333;
     }
 
     .student-links a{
       text-decoration:none;
-      margin-right:18px;
+      margin-right:14px;
       color:#4f46e5;
       font-weight:600;
       transition:0.2s;
@@ -154,12 +177,13 @@ function topFunction() {
     @media(max-width:850px){
 
       .student{
-        flex-direction:column;
+        flex-direction:row;
+        align-items:flex-start;
       }
 
       .student img{
-        width:100%;
-        height:auto;
+      width:135px;
+      height:135px;
       }
 
       h1{
@@ -168,6 +192,10 @@ function topFunction() {
 
       .student-name{
         font-size:25px;
+      }
+
+      .page-intro{
+        font-size:16px;
       }
 
     }
@@ -225,26 +253,32 @@ function topFunction() {
 <div id="content">
 <div class="section">
 
-<font size="+0">
-<b>
-List of Software Engineering Conferences
-</b>
-</font></strong>
-<br>
-<ul>
+
 
 <div class="container">
 
-    <h1>Student Supervision</h1>
+<font size="+3">
+<b>
+Student Supervision
+</b>
+</font></strong>
 
+<p class="page-intro">
+  This page lists students and research assistants I have supervised or co-supervised.
+</p>
 
+<div class="student-section-title">
+  Current Student
+</div>
+
+<ul>
+<br>
     <!-- STUDENT 1 -->
 
     <div class="student">
 
-      <img 
-        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" 
-        alt="student"
+        <img src="Gallery/images/students/NIKOLAS.jpg" alt="student">
+       
       >
 
       <div class="student-content">
@@ -252,27 +286,30 @@ List of Software Engineering Conferences
         <div class="student-top">
 
           <div class="student-name">
-            John Doe
+            Niklas Bockelmann
           </div>
 
           <div class="student-position">
             Research Assistant (Minijob)
           </div>
 
+          <div class="student-duration">
+            August 2026 - December 2026
+          </div>
+
         </div>
 
         <div class="student-description">
-          John is working on machine learning systems,
-          efficient AI accelerators, and distributed training.
+          Niklas obtained his Bachelor's degree in Computer Science from the University of Bremen and is currently pursuing a Master's degree in Computer Science with a specialization in Artificial Intelligence at the University of Bremen. His research project focuses on the analysis of EEG brain data from programmers and the investigation of cognitive patterns during programming tasks.
+
         </div>
 
         <div class="student-links">
 
-          <a href="#">Google Scholar</a>
+         
+          <a href="https://de.linkedin.com/in/niklas-bockelmann-12564b256">LinkedIn</a>
 
-          <a href="#">LinkedIn</a>
-
-          <a href="#">GitHub</a>
+        
 
         </div>
 
@@ -287,7 +324,7 @@ List of Software Engineering Conferences
     <div class="student">
 
       <img 
-        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" 
+        src="Gallery/images/students/uzair.jpg" 
         alt="student"
       >
 
@@ -296,25 +333,29 @@ List of Software Engineering Conferences
         <div class="student-top">
 
           <div class="student-name">
-            Jane Smith
+            Muhammad Uzair Baqir
           </div>
 
           <div class="student-position">
-            MSc Student
+            Research Assistant 
+          </div>
+
+          <div class="student-duration">
+             August 2026 - December 2026
           </div>
 
         </div>
 
         <div class="student-description">
-          Jane works on robust machine learning,
-          computer vision, and multimodal AI systems.
+         Uzair is currently pursuing a Master’s degree in Artificial Intelligence (Intelligent Systems) at the University of Bremen. His research project focuses on EEG signal analysis, biomedical signal processing, and machine learning techniques.
+
         </div>
 
         <div class="student-links">
 
-          <a href="#">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=HdLKtboAAAAJ&hl=en">Google Scholar</a>
 
-          <a href="#">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/uzairbaqir/">LinkedIn</a>
 
         </div>
 
