@@ -188,21 +188,21 @@
 
 .visitor-map-wrapper {
   width: 100%;
-  max-width: 100%;
-  overflow-x: auto;
-  margin-top: 25px;
+  overflow: hidden;
   text-align: center;
+  margin-top: 20px;
 }
 
-.visitor-map-wrapper iframe,
-.visitor-map-wrapper div,
-.visitor-map-wrapper canvas {
-  max-width: 100% !important;
-  height: auto !important;
+.visitor-map-wrapper > div {
+  transform: scale(0.85);
+  transform-origin: top center;
+  width: 100%;
 }
-  @media screen and (max-width: 768px) {
-  #mapmyvisitors {
-    zoom: 0.75;
+
+/* موبایل */
+@media screen and (max-width: 768px) {
+  .visitor-map-wrapper > div {
+    transform: scale(0.60);
   }
 }
 
