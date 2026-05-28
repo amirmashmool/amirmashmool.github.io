@@ -185,6 +185,32 @@
   color: #ffd7d7;
   border-color: #8a2b2b;
 }
+
+.visitor-map-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.visitor-map-wrapper iframe,
+.visitor-map-wrapper div,
+.visitor-map-wrapper canvas {
+  max-width: 100% !important;
+  height: auto !important;
+}
+  @media screen and (max-width: 768px) {
+  #mapmyvisitors {
+    zoom: 0.75;
+  }
+}
+
+
+
+
+
+  
 </style>
 
 </head>
@@ -375,8 +401,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-
-<script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=VmB-OhnY0zN-QtCU14WRtkMtg3oq5VHaf2UDZRDU448&cl=ffffff&w=a"></script>
-  
+<div class="visitor-map-wrapper">
+  <script
+    type="text/javascript"
+    id="mapmyvisitors"
+    src="//mapmyvisitors.com/map.js?d=VmB-OhnY0zN-QtCU14WRtkMtg3oq5VHaf2UDZRDU448&cl=ffffff&w=a">
+  </script>
+</div>
 </body>
 </html>
