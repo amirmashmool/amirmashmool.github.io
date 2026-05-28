@@ -273,8 +273,32 @@
   }
 }
 
+.visitor-map-wrapper {
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.mapmyvisitors-map,
+.jvectormap-container,
+.jvectormap-container svg {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* موبایل */
+@media screen and (max-width: 768px) {
+  .visitor-map-wrapper > div {
+    transform: scale(0.60);
+  }
+}
+
+  
 </style>
 
+
+  
 <script language="javascript">
 
 function toggleDiv(divid)
@@ -363,6 +387,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 
+
+
+
+  
 </head>
 
 <body class="home-page" style="padding: 3px; margin: 0px;">
@@ -608,6 +636,15 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
 
+<div class="visitor-map-wrapper">
+  <script
+    type="text/javascript"
+    id="mapmyvisitors"
+    src="//mapmyvisitors.com/map.js?d=VmB-OhnY0zN-QtCU14WRtkMtg3oq5VHaf2UDZRDU448&cl=ffffff&w=a">
+  </script>
+</div>
+
+  
 <script>
 function syncThemeButton(){
   var b=document.querySelector(".theme-toggle");
