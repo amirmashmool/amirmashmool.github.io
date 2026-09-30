@@ -28,6 +28,57 @@ Amir Mashmool
             margin-left: auto; /* Set left margin to auto for centering */
             margin-right: auto; /* Set right margin to auto for centering */
  }
+  
+ .responsive-table {
+   width: 100%;
+   border-collapse: collapse;
+   border-bottom: 2px solid #999;
+   overflow-x: auto;
+ }
+  
+ .responsive-table thead tr {
+   border-bottom: 2px solid #999;
+ }
+  
+ .responsive-table th {
+   text-align: left;
+   font-weight: bold;
+   padding: 8px;
+ }
+  
+ .responsive-table td {
+   padding: 8px;
+   border-bottom: 1px solid #ddd;
+ }
+  
+ .responsive-table tbody tr:last-child td {
+   border-bottom: none;
+ }
+  
+ @media (max-width: 768px) {
+   .responsive-table {
+     font-size: 14px;
+   }
+    
+   .responsive-table th,
+   .responsive-table td {
+     padding: 6px 4px;
+   }
+ }
+  
+ @media (max-width: 480px) {
+   .responsive-table {
+     font-size: 12px;
+     display: block;
+     overflow-x: auto;
+   }
+    
+   .responsive-table th,
+   .responsive-table td {
+     padding: 4px 2px;
+     white-space: nowrap;
+   }
+ }
 </style>
 
 <script language="javascript">
@@ -165,21 +216,70 @@ Amir has published several articles in prestigious venues, including the Journal
 </div> 
     <h2>Current Appointment</h2>
     
-    <ul align="justify">
-      
-      <li>[December 2024-now] <a href="https://www.uni-bremen.de/en/university/campus/list-of-employees/person/199322/Mashmool" target="_blank">Research Assistant (in German: Wissenschaftlicher Mitarbeiter)</a> - <a href="https://www.uni-bremen.de/st/arbeitsgruppe/mitarbeiterinnen" target="_blank">Software Engineering Research Group</a> - <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen</a></li>
-     <li>[December 2024-now] <a href="https://rtg-cause.github.io/people/mashmool" target="_blank">Associate Fellow</a> -  <a href="https://rtg-cause.github.io/" target="_blank">DFG funded research training group - CAUSE </a></li>
-      <li>[December 2024-now] Teaching Assistant - University of Bremen </li>
-      <li>[December 2024-now] Doctoral Student - University of Bremen </li>
-    </ul>
+    <table class="responsive-table">
+     <thead>
+       <tr>
+         <th>Period</th>
+         <th>Position</th>
+         <th>Organization</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>December 2024-now</td>
+         <td><a href="https://www.uni-bremen.de/en/university/campus/list-of-employees/person/199322/Mashmool" target="_blank">Research Assistant (Wissenschaftlicher Mitarbeiter)</a></td>
+         <td><a href="https://www.uni-bremen.de/st/arbeitsgruppe/mitarbeiterinnen" target="_blank">Software Engineering Research Group</a>, <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen</a></td>
+       </tr>
+       <tr>
+         <td>December 2024-now</td>
+         <td><a href="https://rtg-cause.github.io/people/mashmool" target="_blank">Associate Fellow</a></td>
+         <td><a href="https://rtg-cause.github.io/" target="_blank">DFG funded research training group - CAUSE</a></td>
+       </tr>
+       <tr>
+         <td>December 2024-now</td>
+         <td>Teaching Assistant</td>
+         <td>University of Bremen</td>
+       </tr>
+       <tr>
+         <td>December 2024-now</td>
+         <td>Doctoral Student</td>
+         <td>University of Bremen</td>
+       </tr>
+     </tbody>
+    </table>
 
     <h2>Education</h2>
-    <ul>
-     <li>[December 2024-Present] Ph.D in Computer Science - <a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen,Bremen,Germany</a></li> 
-      <li>[September 2021-July 2024] MSc in Computer Science (Data Science and Engineering) - <a href="https://unige.it/" target="_blank">University of Genova, Genova, Italy</a></li>
-      <li>[September 2016-July 2021] BSc in Computer Engineering (Software) - <a  href="https://birjand.ac.ir/en" target="_blank">University of Birjand,Birjand, Iran</a></li>
-     <li>[2012-2016] Diploma in Physics and Mathematics Discipline - Imam Hussein High School, Torbat Heydarieh, Iran </li>
-    </ul>
+    <table class="responsive-table">
+     <thead>
+       <tr>
+         <th>Period</th>
+         <th>Degree</th>
+         <th>Institution</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>December 2024-Present</td>
+         <td>Ph.D in Computer Science</td>
+         <td><a href="https://www.uni-bremen.de/en/" target="_blank">University of Bremen, Bremen, Germany</a></td>
+       </tr>
+       <tr>
+         <td>September 2021-July 2024</td>
+         <td>MSc in Computer Science (Data Science and Engineering)</td>
+         <td><a href="https://unige.it/" target="_blank">University of Genova, Genova, Italy</a></td>
+       </tr>
+       <tr>
+         <td>September 2016-July 2021</td>
+         <td>BSc in Computer Engineering (Software)</td>
+         <td><a href="https://birjand.ac.ir/en" target="_blank">University of Birjand, Birjand, Iran</a></td>
+       </tr>
+       <tr>
+         <td>2012-2016</td>
+         <td>Diploma in Physics and Mathematics Discipline</td>
+         <td>Imam Hussein High School, Torbat Heydarieh, Iran</td>
+       </tr>
+     </tbody>
+    </table>
     
 
     <h2>Awards</h2>
