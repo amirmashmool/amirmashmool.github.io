@@ -883,3 +883,17 @@ body.home-page .bottom-news-panels {
     font-size: 24px !important;
   }
 }
+
+/* =============================
+   SECTION HEADERS - ACADEMIC STYLE
+   ============================= */
+
+.section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0b2b4f;
+  border-bottom: 2px solid #f0c94d;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+  margin: 2rem 0 1.2rem 0;
+}
