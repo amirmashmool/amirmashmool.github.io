@@ -15,6 +15,22 @@ Amir Mashmool
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   }
 
+  .research-cards .infrontt {
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fb 100%);
+    border: 1px solid var(--border-soft);
+    border-left: 4px solid var(--accent);
+    box-shadow: 0 12px 28px rgba(20, 50, 79, .07);
+  }
+
+  .research-cards .infrontt h3 {
+    margin-top: 0;
+    color: var(--academic-navy);
+  }
+
+  body.dark-mode .research-cards .infrontt {
+    background: linear-gradient(180deg, #1b2635 0%, #151d29 100%);
+  }
+
   @media (max-width: 900px) {
     .research-cards {
       grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -142,6 +158,10 @@ Research Interests
     </ul>
   </div>
   <div class="infrontt">
+    <h3>AI for Software Engineering</h3>
+    <p>Applying AI and machine learning techniques to Software Engineering problems.</p>
+  </div>
+  <div class="infrontt">
     <h3>Software Visualization</h3>
   </div>
   <div class="infrontt">
@@ -152,6 +172,7 @@ Research Interests
     <ul>
       <li>Software Development Methodologies</li>
       <li>Agile Software Development</li>
+      <li>DevOps</li>
     </ul>
   </div>
   <div class="infrontt">
@@ -159,13 +180,6 @@ Research Interests
     <ul>
       <li>Microservices Architecture (MSA)</li>
     </ul>
-  </div>
-  <div class="infrontt">
-    <h3>DevOps</h3>
-  </div>
-  <div class="infrontt">
-    <h3>AI for Software Engineering</h3>
-    <p>Applying AI and machine learning techniques to Software Engineering problems.</p>
   </div>
 </div>
 
@@ -184,7 +198,6 @@ document.addEventListener("DOMContentLoaded",function(){if(localStorage.getItem(
 </script>
 </body>
 </html>
-
 
 
 
