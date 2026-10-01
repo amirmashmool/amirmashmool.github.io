@@ -10,6 +10,23 @@ Amir Mashmool
   <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="index.css" rel="stylesheet" type="text/css">
+<style>
+  .research-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  @media (max-width: 900px) {
+    .research-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .research-cards {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
 
 <script language="javascript">
   function toggleDiv(divid)
@@ -101,24 +118,55 @@ function topFunction() {
 <div id="content">
 <div class="section">
 
+<h2>Research IDs</h2>
+<ul>
+  <li><a href="https://publons.com/researcher/3809289/amir-mashmool/">Web of Science ResearcherID : KCL-4760-2024</a></li>
+  <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57221141927">Scopus Author ID: 57221141927  </a></li>
+  <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-1612-3094">ORCID ID : 0000-0002-1612-3094  </a></li>
+  <li><a href="https://www.adscientificindex.com/scientist/amir-mashmool/5207651">AD Scientific Index ID : 5207651  </a></li>
+</ul>
+
 <h2>
 Research Interests
 </h2>
 <p>My research focuses on Software Engineering, including how AI and machine learning can be applied to address software engineering challenges.</p>
 
 <h2>Current Research Focus</h2>
-<div class="infrontt">
-  <h3><i>Software Engineering</i></h3>
-  <ul>
-    <li>Program Comprehension</li>
-    <li>Software Visualization</li>
-    <li>Empirical Software Engineering</li>
-    <li>Software Development Methodologies</li>
-    <li>Agile Software Development</li>
-    <li>Microservices Architecture (MSA)</li>
-    <li>Software Architecture and Design</li>
-    <li>DevOps</li>
-  </ul>
+<h3><i>Software Engineering</i></h3>
+<div class="infront research-cards">
+  <div class="infrontt">
+    <h3>Program Comprehension</h3>
+    <ul>
+      <li>Cognitive Aspects of Program Comprehension</li>
+      <li>Program Slicing</li>
+    </ul>
+  </div>
+  <div class="infrontt">
+    <h3>Software Visualization</h3>
+  </div>
+  <div class="infrontt">
+    <h3>Empirical Software Engineering</h3>
+  </div>
+  <div class="infrontt">
+    <h3>Software Development</h3>
+    <ul>
+      <li>Software Development Methodologies</li>
+      <li>Agile Software Development</li>
+    </ul>
+  </div>
+  <div class="infrontt">
+    <h3>Software Architecture and Design</h3>
+    <ul>
+      <li>Microservices Architecture (MSA)</li>
+    </ul>
+  </div>
+  <div class="infrontt">
+    <h3>DevOps</h3>
+  </div>
+  <div class="infrontt">
+    <h3>AI for Software Engineering</h3>
+    <p>Applying AI and machine learning techniques to Software Engineering problems.</p>
+  </div>
 </div>
 
 <h3>Previous Research in Artificial Intelligence</h3>
@@ -129,14 +177,6 @@ Research Interests
   <li>Applications of Machine Learning</li>
 </ul>
 
-<h2>Research IDs</h2>
-<ul>
-  <li><a href="https://publons.com/researcher/3809289/amir-mashmool/">Web of Science ResearcherID : KCL-4760-2024</a></li>
-  <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57221141927">Scopus Author ID: 57221141927  </a></li>
-  <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-1612-3094">ORCID ID : 0000-0002-1612-3094  </a></li>
-  <li><a href="https://www.adscientificindex.com/scientist/amir-mashmool/5207651">AD Scientific Index ID : 5207651  </a></li>
-</ul>
-
 <script>
 function syncThemeButton(){var b=document.querySelector(".theme-toggle");if(!b)return;var d=document.body.classList.contains("dark-mode");b.textContent=d?"☀ Light":"☾ Dark";}
 function toggleThemeMode(){document.body.classList.toggle("dark-mode");localStorage.setItem("site-theme",document.body.classList.contains("dark-mode")?"dark":"light");syncThemeButton();}
@@ -144,8 +184,6 @@ document.addEventListener("DOMContentLoaded",function(){if(localStorage.getItem(
 </script>
 </body>
 </html>
-
-
 
 
 
