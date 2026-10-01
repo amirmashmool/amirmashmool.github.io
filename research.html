@@ -27,6 +27,47 @@ Amir Mashmool
     color: var(--academic-navy);
   }
 
+  .research-ids {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 24px;
+    padding: 0 !important;
+    list-style: none;
+  }
+
+  .research-ids li {
+    margin: 0 !important;
+  }
+
+  .research-ids a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 6px 12px;
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    background: linear-gradient(180deg, #fbfdff 0%, #f5f8fb 100%);
+    color: var(--academic-navy);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+    transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+  }
+
+  .research-ids a:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(20, 50, 79, .1);
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  body.dark-mode .research-ids a {
+    background: linear-gradient(180deg, #1b2635 0%, #151d29 100%);
+    color: #e8edf3;
+  }
+
   body.dark-mode .research-cards .infrontt {
     background: linear-gradient(180deg, #1b2635 0%, #151d29 100%);
   }
@@ -135,11 +176,11 @@ function topFunction() {
 <div class="section">
 
 <h2>Research IDs</h2>
-<ul>
-  <li><a href="https://publons.com/researcher/3809289/amir-mashmool/">Web of Science ResearcherID : KCL-4760-2024</a></li>
-  <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57221141927">Scopus Author ID: 57221141927  </a></li>
-  <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-1612-3094">ORCID ID : 0000-0002-1612-3094  </a></li>
-  <li><a href="https://www.adscientificindex.com/scientist/amir-mashmool/5207651">AD Scientific Index ID : 5207651  </a></li>
+<ul class="research-ids">
+  <li><a href="https://publons.com/researcher/3809289/amir-mashmool/">Web of Science: KCL-4760-2024</a></li>
+  <li><a href="https://www.scopus.com/authid/detail.uri?authorId=57221141927">Scopus: 57221141927</a></li>
+  <li><a href="https://orcid.org/my-orcid?orcid=0000-0002-1612-3094">ORCID: 0000-0002-1612-3094</a></li>
+  <li><a href="https://www.adscientificindex.com/scientist/amir-mashmool/5207651">AD Scientific Index: 5207651</a></li>
 </ul>
 
 <h2>
@@ -200,7 +241,6 @@ document.addEventListener("DOMContentLoaded",function(){if(localStorage.getItem(
 </script>
 </body>
 </html>
-
 
 
 
