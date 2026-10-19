@@ -92,51 +92,80 @@ Amir Mashmool
 
       <div class="folder-list">
 
- <div class="folder" onclick="location.href='Gallery/iran/index.html'">
+ <div class="folder" data-gallery-count="Gallery/iran/index.html" onclick="location.href='Gallery/iran/index.html'">
           <img src="Gallery/iran/iran.jpg" alt="My Beautiful Country iran">
-          <p>My Beautiful Country iran (5 photos)</p>
+          <p>My Beautiful Country iran (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
 
- <div class="folder" onclick="location.href='Images/CAUSE/index.html'">
+ <div class="folder" data-gallery-count="Images/CAUSE/index.html" onclick="location.href='Images/CAUSE/index.html'">
           <img src="Images/DFG.jpg" alt="CAUSE">
-          <p>DFG funded research training group - CAUSE(5 photos)</p>
+          <p>DFG funded research training group - CAUSE (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
         
-        <div class="folder" onclick="location.href='Gallery/University_Bremen/index.html'">
+        <div class="folder" data-gallery-count="Gallery/University_Bremen/index.html" onclick="location.href='Gallery/University_Bremen/index.html'">
           <img src="Gallery/University_Bremen/examday.jpg" alt="University of Bremen">
-          <p>University of Bremen (3 photos)</p>
+          <p>University of Bremen (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
-        <div class="folder" onclick="location.href='Gallery/University_Genova/index.html'">
+        <div class="folder" data-gallery-count="Gallery/University_Genova/index.html" onclick="location.href='Gallery/University_Genova/index.html'">
           <img src="Gallery/University_Genova/m1.JPG" alt="University of Genova">
-          <p>University of Genova (6 photos)</p>
+          <p>University of Genova (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
-        <div class="folder" onclick="location.href='Gallery/University_Birjand/index.html'">
+        <div class="folder" data-gallery-count="Gallery/University_Birjand/index.html" onclick="location.href='Gallery/University_Birjand/index.html'">
           <img src="Gallery/University_Birjand/acm1.jpg" alt="University of Birjand">
-          <p>University of Birjand (6 photos)</p>
+          <p>University of Birjand (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
-        <div class="folder" onclick="location.href='Gallery/Schools/Imam_Hussein/index.html'">
+        <div class="folder" data-gallery-count="Gallery/Schools/Imam_Hussein/index.html" onclick="location.href='Gallery/Schools/Imam_Hussein/index.html'">
           <img src="Gallery/Schools/Imam_Hussein/high school1.jpg" alt="Imam Hussein High School">
-          <p>Imam Hussein High School (3 photos)</p>
+          <p>Imam Hussein High School (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
-        <div class="folder" onclick="location.href='Gallery/Schools/Hazrat_Mahdi/index.html'">
+        <div class="folder" data-gallery-count="Gallery/Schools/Hazrat_Mahdi/index.html" onclick="location.href='Gallery/Schools/Hazrat_Mahdi/index.html'">
           <img src="Gallery/Schools/Hazrat_Mahdi/mid school1.JPG" alt="Hazrat Mahdi Middle School">
-          <p>Hazrat Mahdi Middle School (1 photo)</p>
+          <p>Hazrat Mahdi Middle School (<span class="photo-count">Loading count...</span>)</p>
         </div>
 
-        <div class="folder" onclick="location.href='Gallery/Childhood/index.html'">
+        <div class="folder" data-gallery-count="Gallery/Childhood/index.html" onclick="location.href='Gallery/Childhood/index.html'">
           <img src="Gallery/Childhood/chilhood1.JPG" alt="Childhood">
-          <p>Childhood (1 photo)</p>
+          <p>Childhood (<span class="photo-count">Loading count...</span>)</p>
+        </div>
+
+        <div class="folder" data-gallery-count="Gallery/Seminar_Class_Winter_Semester_2026_University_of_Bremen/index.html" onclick="location.href='Gallery/Seminar_Class_Winter_Semester_2026_University_of_Bremen/index.html'">
+          <img src="Gallery/Seminar_Class_Winter_Semester_2026_University_of_Bremen/seminar-class-1.jpg" alt="Seminar class at the University of Bremen">
+          <p>Seminar Class Winter Semester 2026 - University of Bremen (<span class="photo-count">Loading count...</span>)</p>
         </div>
       </div>
 
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll("[data-gallery-count]").forEach(function (folder) {
+      var countLabel = folder.querySelector(".photo-count");
+      var galleryUrl = folder.getAttribute("data-gallery-count");
+
+      fetch(galleryUrl)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Could not load " + galleryUrl + ": " + response.status);
+          }
+          return response.text();
+        })
+        .then(function (html) {
+          var galleryDocument = new DOMParser().parseFromString(html, "text/html");
+          var photoCount = galleryDocument.querySelectorAll(".folder-list .folder img").length;
+          countLabel.textContent = photoCount + (photoCount === 1 ? " photo" : " photos");
+        })
+        .catch(function (error) {
+          console.error("Unable to determine gallery photo count.", error);
+          countLabel.textContent = "count unavailable";
+        });
+    });
+  </script>
 
 </body>
 </html>
