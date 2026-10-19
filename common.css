@@ -897,3 +897,179 @@ body.home-page .bottom-news-panels {
   display: inline-block;
   margin: 2rem 0 1.2rem 0;
 }
+
+/* Responsive layout safeguards shared by all site pages */
+#site_menu_first,
+#site_menu,
+#content,
+#footer,
+#content .section,
+#content .section > * {
+  min-width: 0;
+}
+
+#content img,
+#content video,
+#content iframe,
+#content canvas {
+  max-width: 100%;
+}
+
+#content table {
+  max-width: 100%;
+}
+
+#content pre,
+#content code {
+  overflow-wrap: anywhere;
+}
+
+.Course,
+.project {
+  min-width: 0;
+}
+
+.Course-info,
+.project-info {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.folder {
+  width: 100% !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  max-width: min(90vw, 100%) !important;
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 901px) {
+  body.home-page .home-main-layout {
+    grid-template-columns: minmax(0, 337px) minmax(0, 620px) !important;
+    gap: clamp(20px, 4vw, 40px) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #site_menu_first {
+    min-height: 110px;
+  }
+
+  #site_menu,
+  #content,
+  #footer {
+    width: 100%;
+  }
+
+  #content {
+    padding: 22px 16px 30px !important;
+  }
+
+  .Course,
+  .project {
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .Course img,
+  .project img {
+    flex: 0 0 130px;
+    max-width: min(35%, 165px);
+    height: auto;
+    object-fit: contain;
+  }
+
+  .teaching-toolbar input {
+    min-width: min(260px, 100%);
+  }
+
+  .folder p {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    text-overflow: clip !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #site_menu_first {
+    min-height: 88px;
+  }
+
+  #site_menu ul {
+    justify-content: flex-start !important;
+  }
+
+  #site_menu ul li a,
+  .theme-toggle {
+    font-size: 12px !important;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+  }
+
+  #content {
+    padding: 18px 12px 26px !important;
+  }
+
+  #content h1,
+  #content h2,
+  #content h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .Course,
+  .project {
+    flex-direction: column;
+  }
+
+  .Course img,
+  .project img {
+    flex: 0 1 auto;
+    width: min(100%, 240px);
+    max-width: 100%;
+    margin: 0 auto 8px;
+  }
+
+  .folder-list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)) !important;
+  }
+
+  .folder img {
+    height: clamp(160px, 60vw, 240px) !important;
+  }
+
+  .folder p {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    text-overflow: clip !important;
+  }
+
+  .contact-card {
+    min-width: min(220px, 100%);
+  }
+}
+
+@media (max-width: 380px) {
+  #site_menu ul li a,
+  .theme-toggle {
+    font-size: 11px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
+  #content {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
