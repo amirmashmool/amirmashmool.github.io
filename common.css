@@ -957,8 +957,18 @@ button {
 
 @media (min-width: 901px) {
   body.home-page .home-main-layout {
-    grid-template-columns: minmax(0, 337px) minmax(0, 620px) !important;
-    gap: clamp(20px, 4vw, 40px) !important;
+    grid-template-columns: minmax(0, 337px) minmax(0, 680px) !important;
+    gap: clamp(18px, 2.5vw, 28px) !important;
+    width: 100% !important;
+    max-width: 1045px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.home-page .home-bio-text {
+    width: 100% !important;
+    max-width: 680px !important;
+    min-width: 0 !important;
   }
 }
 
