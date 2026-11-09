@@ -1092,3 +1092,132 @@ button {
     padding-right: 10px !important;
   }
 }
+
+/* Consistent dark theme for every page that uses the shared site navigation. */
+#header,
+#site_menu_first,
+#site_menu,
+#content,
+#footer {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 901px) {
+  body.home-page #header,
+  body.home-page #site_menu_first,
+  body.home-page #site_menu,
+  body.home-page #content,
+  body.home-page #footer {
+    max-width: 1280px !important;
+  }
+}
+
+body.dark-mode {
+  color-scheme: dark;
+  background: #0d121a !important;
+  color: #e8edf3 !important;
+}
+
+body.dark-mode #site_menu_first,
+body.dark-mode #site_menu,
+body.dark-mode #content,
+body.dark-mode #footer {
+  background: #151d29 !important;
+  color: #e8edf3 !important;
+  border-color: #2d3a4b !important;
+}
+
+body.dark-mode #content * {
+  color: #e8edf3 !important;
+  border-color: #2d3a4b !important;
+}
+
+body.dark-mode #content a {
+  color: #8bb8e8 !important;
+}
+
+body.dark-mode #content a.back-button {
+  background-color: #1769aa !important;
+  color: #fff !important;
+}
+
+body.dark-mode #content a.back-button:hover {
+  background-color: #0e5793 !important;
+}
+
+body.dark-mode #content .folder,
+body.dark-mode #content .coauthor-card,
+body.dark-mode #content .infrontt,
+body.dark-mode #content .card,
+body.dark-mode #content .content-card,
+body.dark-mode #content .gray-box,
+body.dark-mode #content .news-card,
+body.dark-mode #content .opportunity-card,
+body.dark-mode #content .collaboration-card,
+body.dark-mode #content .contact-card,
+body.dark-mode #content .meeting-box,
+body.dark-mode #content .grant-entry,
+body.dark-mode #content .grant-content,
+body.dark-mode #content .student-card,
+body.dark-mode #content .student-section,
+body.dark-mode #content .thesis-card,
+body.dark-mode #content .publication-card,
+body.dark-mode #content .pub-item,
+body.dark-mode #content .section-title-box {
+  background-color: #1b2635 !important;
+  background-image: none !important;
+}
+
+body.dark-mode #content [style*="background"] {
+  background-color: #1b2635 !important;
+  background-image: none !important;
+}
+
+body.dark-mode #content img {
+  color: initial !important;
+}
+
+body.dark-mode #content input,
+body.dark-mode #content textarea,
+body.dark-mode #content select {
+  background: #0d121a !important;
+  color: #e8edf3 !important;
+  border-color: #46566b !important;
+}
+
+body.dark-mode #content button {
+  background-color: #243244 !important;
+  color: #e8edf3 !important;
+  border-color: #46566b !important;
+}
+
+body.dark-mode .theme-toggle {
+  background: #1b2635 !important;
+  color: #e8edf3 !important;
+  border-color: #46566b !important;
+}
+
+body.dark-mode #site_menu ul li a {
+  background: #1b2635 !important;
+  color: #dce6f2 !important;
+  border-color: #2d3a4b !important;
+}
+
+body.dark-mode #site_menu ul li a:hover {
+  background: #223149 !important;
+  border-color: #46566b !important;
+}
+
+body.dark-mode #site_menu ul li a#selected_menu {
+  background: #244c73 !important;
+  color: #fff !important;
+}
+
+body.dark-mode .coauthor-photo,
+body.dark-mode .academic-profiles img,
+body.dark-mode .social-profiles img {
+  background: #f1f3f5 !important;
+}

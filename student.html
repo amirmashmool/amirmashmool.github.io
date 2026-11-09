@@ -4,24 +4,12 @@
 <title> 
 Amir Mashmool
 </title> 
-<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+<meta charset="UTF-8">
   <title>Amir Mashmool </title>
  <META NAME="DESCRIPTION" CONTENT="This is my personal blog, where I share about my Education, Research and my Activities.">
   <META NAME="KEYWORDS" CONTENT="Amir Mashmool , Mashmool, Mashmoul, امیر مشمول, مشمول">
 <link href="common.css" rel="stylesheet" type="text/css">
 <link href="index.css" rel="stylesheet" type="text/css">
-<style type="text/css">
- /* Define a CSS style for the image */
-        #erdos_image {
-            display: block; /* Set the display property to 'block' to ensure it's a block-level element */
-            max-width: 60%; /* Set the maximum width of the image to the width of its container */
-            height: auto; /* Automatically adjust the height to maintain aspect ratio */
-            margin-top: 10px; /* Add some top margin for spacing */
-            margin-left: auto; /* Set left margin to auto for centering */
-            margin-right: auto; /* Set right margin to auto for centering */
- }
-</style>
-
 <script language="javascript">
   function toggleDiv(divid)
   {
@@ -62,7 +50,6 @@ function topFunction() {
 </script>
 
 
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Student Supervision</title>
@@ -174,6 +161,47 @@ function topFunction() {
       color:#111;
     }
 
+    .former-students .student{
+      max-width:760px;
+      gap:14px;
+      margin:0 0 24px;
+      padding:14px;
+      border:1px solid #d8e0e8;
+      border-radius:12px;
+      background:#f8fafc;
+      transform:none;
+    }
+
+    .former-students .student img{
+      width:105px;
+      height:105px;
+      border-radius:10px;
+    }
+
+    .former-students .student-name{
+      font-size:19px;
+    }
+
+    .former-students .student-description{
+      font-size:14px;
+    }
+
+    .former-student-detail{
+      margin:0 0 8px;
+      color:#5f7083;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    body.dark-mode .former-students .student{
+      border-color:#2d3a4b;
+      background:#1b2635;
+    }
+
+    body.dark-mode .former-student-detail{
+      color:#aebbcc;
+    }
+
     @media(max-width:850px){
 
       .student{
@@ -202,7 +230,8 @@ function topFunction() {
 
   </style>
 
-</head> 
+<script src="theme.js" defer></script>
+</head>
  
 <body style="   padding: 3px;    margin: 0px;">
 
@@ -257,8 +286,6 @@ function topFunction() {
   Current Student (Funded by MMM)
 </div>
 
-<ul>
-<br>
     <!-- STUDENT 1 -->
 
     <div class="student">
@@ -346,14 +373,10 @@ function topFunction() {
 
     </div>
 
-</ul>
-
 <div class="student-section-title">
-  Hiwi (Funded by CAUSE)
+  Former Students
 </div>
-
-<ul>
-<br>
+<div class="former-students">
 
     <!-- STUDENT 3 -->
 
@@ -373,9 +396,13 @@ function topFunction() {
           </div>
 
           <div class="student-position">
-            Research Assistant; Co-supervise with Iman Morovatian
+            Hiwi (Funded by CAUSE)
           </div>
 
+        </div>
+
+        <div class="former-student-detail">
+          Co-supervised with Iman Morovatian
         </div>
 
         <div class="student-description">
@@ -390,9 +417,7 @@ function topFunction() {
 
     </div>
 
-
-  </div>
-
+</div>
 
   
 
