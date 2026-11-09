@@ -18,9 +18,10 @@ Amir Mashmool
   box-sizing: border-box;
 }
 
-#erdos_image{
+#content .erdos-image{
   display: block;
-  max-width: 60%;
+  width: min(60%, 640px);
+  max-width: 100%;
   height: auto;
   margin: 20px auto;
 }
@@ -160,8 +161,8 @@ img.coauthor-photo{
     max-height: 142px !important;
   }
 
-  #erdos_image{
-    max-width: 95%;
+  #content .erdos-image{
+    width: 95%;
   }
 }
 
@@ -611,7 +612,7 @@ It's a fun way to measure the collaboration and connection between mathematician
 If you've written a paper with someone who has an Erdos number of 2, your Erdos number is 3, and so on.
 </p>
 <br>
- <img id="erdos_image" src="Images/erdos.jpg">
+ <img class="erdos-image" src="Images/erdos.jpg" alt="Illustration of the Erdős number">
 <br>
 <br>
 
@@ -621,7 +622,7 @@ My Erdős number
 </b>
 
   <br>
- <img id="erdos_image" src="Images/erdos Amir.jpg">
+ <img class="erdos-image" src="Images/erdos Amir.jpg" alt="My Erdős number is 4">
 <br>
 </font></strong>
 <be>
@@ -638,7 +639,6 @@ It's not the smallest Erdos number out there, but it's still pretty cool to know
 </body> 
  
 </html> 
-
 
 
 

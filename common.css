@@ -1094,6 +1094,27 @@ button {
 }
 
 /* Consistent dark theme for every page that uses the shared site navigation. */
+#header,
+#site_menu_first,
+#site_menu,
+#content,
+#footer {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 901px) {
+  body.home-page #header,
+  body.home-page #site_menu_first,
+  body.home-page #site_menu,
+  body.home-page #content,
+  body.home-page #footer {
+    max-width: 1280px !important;
+  }
+}
+
 body.dark-mode {
   color-scheme: dark;
   background: #0d121a !important;
