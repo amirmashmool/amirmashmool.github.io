@@ -974,17 +974,17 @@ button {
   }
 
   body.home-page .home-main-layout {
-    grid-template-columns: minmax(0, 337px) minmax(0, 760px) !important;
+    grid-template-columns: 337px minmax(0, 1fr) !important;
     gap: clamp(18px, 2vw, 24px) !important;
     width: 100% !important;
-    max-width: 1160px !important;
+    max-width: 100% !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
   body.home-page .home-bio-text {
     width: 100% !important;
-    max-width: 760px !important;
+    max-width: none !important;
     min-width: 0 !important;
   }
 }
