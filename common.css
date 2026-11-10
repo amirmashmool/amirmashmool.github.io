@@ -602,7 +602,7 @@ body.home-page .news-card li,body.home-page .opportunity-card li{position:relati
 body.home-page .news-card li:last-child,body.home-page .opportunity-card li:last-child{border-bottom:0!important}
 body.home-page .news-card li::before,body.home-page .opportunity-card li::before{content:"";position:absolute;left:0;top:22px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(176,141,47,.13)}
 body.home-page .academic-profiles{display:flex!important;flex-wrap:wrap!important;gap:12px!important;align-items:center!important;margin:12px 0 26px!important}
-body.home-page .home-news-scroll{flex:1 1 auto;min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:var(--accent) var(--border-soft);scrollbar-width:thin}
+body.home-page .home-news-scroll{flex:1 1 auto;min-height:0;max-height:none;overflow-y:auto;overscroll-behavior:contain}
 body.home-page .home-news-table{width:100%;border:0;border-collapse:collapse;table-layout:fixed}
 body.home-page .home-news-table th,body.home-page .home-news-table td{padding:8px 10px;border:0;font-size:14px;line-height:1.55;text-align:left;vertical-align:top}
 body.home-page .home-news-table th{width:140px;padding-left:0;padding-right:16px;color:var(--text-muted);font-weight:700;white-space:nowrap}
