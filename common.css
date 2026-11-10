@@ -600,10 +600,10 @@ body.home-page .news-card li,body.home-page .opportunity-card li{position:relati
 body.home-page .news-card li:last-child,body.home-page .opportunity-card li:last-child{border-bottom:0!important}
 body.home-page .news-card li::before,body.home-page .opportunity-card li::before{content:"";position:absolute;left:0;top:22px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(176,141,47,.13)}
 body.home-page .academic-profiles{display:flex!important;flex-wrap:wrap!important;gap:12px!important;align-items:center!important;margin:12px 0 26px!important}
-body.home-page .home-news-scroll{max-height:260px;overflow-y:auto;overscroll-behavior:contain;scrollbar-color:var(--accent) var(--border-soft);scrollbar-width:thin}
+body.home-page .home-news-scroll{max-height:none;overflow:visible;overscroll-behavior:auto}
 body.home-page .home-news-table{width:100%;border:0;border-collapse:collapse;table-layout:fixed}
 body.home-page .home-news-table th,body.home-page .home-news-table td{padding:8px 10px;border:0;font-size:14px;line-height:1.55;text-align:left;vertical-align:top}
-body.home-page .home-news-table th{width:100px;padding-left:0;color:var(--text-muted);font-weight:700;white-space:nowrap}
+body.home-page .home-news-table th{width:140px;padding-left:0;padding-right:16px;color:var(--text-muted);font-weight:700;white-space:nowrap}
 body.home-page .home-news-table td{overflow-wrap:anywhere}
 @media(max-width:880px){body.home-page #profileSlider{float:none!important;margin:0 auto 28px!important;width:min(390px,100%)!important}body.home-page #profileSlider .slides-wrap,body.home-page #profileSlider .slide{width:100%!important;height:460px!important}}
 .folder-list{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))!important;gap:18px!important}.folder{padding:8px!important;border-radius:14px!important;overflow:hidden!important}.folder img{width:100%!important;height:250px!important;object-fit:cover!important;border-radius:10px!important}.folder p{margin:6px 4px 2px!important;line-height:1.2!important;font-size:12.5px!important;font-weight:700!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
