@@ -1100,19 +1100,10 @@ button {
 #content,
 #footer {
   width: 100% !important;
-  max-width: 1200px !important;
+  max-width: 1280px !important;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-@media (min-width: 901px) {
-  body.home-page #header,
-  body.home-page #site_menu_first,
-  body.home-page #site_menu,
-  body.home-page #content,
-  body.home-page #footer {
-    max-width: 1280px !important;
-  }
+  box-sizing: border-box !important;
 }
 
 body.dark-mode {
