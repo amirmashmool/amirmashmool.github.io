@@ -831,8 +831,14 @@ body.home-page #profileSlider .slide {
 
 body.home-page .bottom-news-panels {
   display: grid !important;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr) !important;
-  gap: 12px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 18px !important;
+}
+
+body.home-page .opportunity-card {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 @media (max-width: 900px) {
